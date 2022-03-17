@@ -1,0 +1,149 @@
+
+
+.grid{
+    display: grid;
+    grid-template-areas: 'main main main'
+                         'first first second'
+                         'first first third';
+}
+
+.main{
+    height: 100vh;
+    grid-area: main;
+    
+    background: linear-gradient(to bottom,rgba(34, 34, 34, 0.74),#222),url('../img/main2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    width: 70%;
+}
+
+.main-text{
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+}
+
+
+
+#start{
+   background: #7E7F83;
+    font-size: larger;
+    font-weight: 600;
+    border-radius: 2px;
+    text-transform: uppercase;
+    display: flex;
+    padding: 5px 20px;
+    transition: all 0.15s ease-in-out;
+}
+
+#start:hover{
+    background: #F3F3F4;
+}
+
+.photo1{
+    height: 100vh;
+    grid-area: first;
+}
+
+.img-holder1{
+    background: url('../img/iphone.png');
+}
+
+.img-holder2{
+    background: url('../img/hp.jpg');
+}
+
+.photo2{
+    grid-area: second;
+}
+.photo{
+    position: relative;
+    overflow: hidden;
+    color: black;
+    display: flex;
+    align-items: flex-end;
+}
+.img-holder{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s ease-in-out;
+}
+.photo:hover .img-holder{
+    transform: scale(1.2);
+}
+.photo3{
+    background: blueviolet;
+    grid-area: third;
+}
+
+.article1-title{
+    font-size: 2.5rem;
+}
+
+
+.article-title{
+    font-size: 1.5rem;
+}
+
+.cmimi{
+   font-size: 1.05rem;
+}
+
+.article1-cmimi{
+    font-size: 1.3rem;
+}
+
+.article{
+    background: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.article1{
+    padding: 40px;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .grid{
+        grid-template-areas: 'main' 'first' 'second' 'third';
+    }
+    .photo,.main{
+        height: 400px;
+    }
+    
+.article1-title{
+    font-size: 1.5rem;
+}
+.article1-cmimi{
+    font-size: 1.05rem;
+}
+.article1{
+    padding: 10px;
+}
+
+.main-text{
+    font-size: 1.3rem;
+    color: white;
+    padding: 10px;
+}
+}

@@ -1,0 +1,145 @@
+.shop-grid{
+    display: grid;
+    grid-template-areas: 'categ categ'
+                         'filter products';
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+.categories{
+    grid-area: categ;
+    display: flex;
+    gap: 20px;
+    padding: 5px 40px;
+}
+
+.shop-grid-item,.product{
+    background: #ADB3BC;
+}
+
+
+
+.category{
+    color: black;
+    padding: 9px 16px;
+    position: relative;
+    transition: all 0.15s ease-in-out;
+}
+.category:active{
+    /* box-shadow: inset 0 0 5px black; */
+    border-radius: 3px;
+}
+
+.category::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    transition: width 0.15s ease-in;
+}
+
+.category:hover:after{
+    width: 100%;
+    background-color: black;
+}
+
+.category:active::after{
+    display: none;
+}
+
+.product-filter{
+    grid-area: filter;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    align-self: flex-start;
+    min-width: 300px;
+}
+
+.filter{
+    color: black;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter:hover{
+    color: #FDFDFD;
+}
+
+.filter-title{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,220px);
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.product-image{
+    background: url('https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-max-01.jpg');
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    transition: all 0.15s ease-in-out;
+}
+
+.product:hover .product-image{
+    background-size: 105%;
+}
+
+.product-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-body{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-title{
+    font-size: 0.95rem;
+    height: 35px;
+}
+
+.discount{
+    text-decoration: line-through;
+    color: rgb(190, 0, 0);
+}
+.product-price{
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width:800px) {
+    .shop-grid{
+        grid-template-areas: 'categ'
+                             'filter'
+                             'products';
+       grid-template-columns: 100%;
+    }
+    .product-filter,.categories{
+        justify-self: center;
+        width: 90%;
+    }
+    .category{
+        padding: 4px 8px;
+    }
+    .products{
+        justify-content: center;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/shop.css">
+</head>
+
+<body>
+    <nav id="nav"></nav>
+
+    <div class="sidebar">
+        <svg class="close" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                fill="currentColor" />
+        </svg>
+        <div class="side-items">
+            <a href="./shop.html" class="item-1 side-row">
+                <div class="side-item">Shop</div>
+            </a>
+            <a href="./laptop.html" class="item-2 side-row">
+                <div class="side-item">Laptop</div>
+            </a>
+            <a href="./smartphone.html" class="item-3 side-row">
+                <div class="side-item">Smartphone</div>
+            </a>
+        </div>
+    </div>
+    <div class="banner">
+        <div></div>
+        <div>Free domestic shipping.</div>
+        <svg class="close-banner" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                fill="currentColor" />
+        </svg>
+    </div>
+
+    <div class="container">
+        <div class="shop-grid">
+            <div class="categories shop-grid-item">
+                <a class="category" href="./shop.html">All</a>
+                <a class="category" href="./desktops.html">Desktops</a>
+                <a class="category" href="./laptop.html">Laptops</a>
+                <a class="category" href="./smartphone.html">Smartphones</a>
+                <a class="category" href="./accessories.html">Accessories</a>
+            </div>
+            <div class="product-filter shop-grid-item">
+                <div class="filter-title">Product Filter</div>
+                <a class="filter" href="#">
+                    <div>Brand</div>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.3284 11.0001V13.0001L7.50011 13.0001L10.7426 16.2426L9.32842 17.6568L3.67157 12L9.32842 6.34314L10.7426 7.75735L7.49988 11.0001L20.3284 11.0001Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+                <a class="filter" href="#">
+                    <div>Price</div>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.3284 11.0001V13.0001L7.50011 13.0001L10.7426 16.2426L9.32842 17.6568L3.67157 12L9.32842 6.34314L10.7426 7.75735L7.49988 11.0001L20.3284 11.0001Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
+            <div id="products" class="products">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>Edison Qerimi - 2022 Open Source</div>
+        <div>
+            <img width="35px" src="./img/mastercard.png" alt="MasterCard">
+            <img width="35px" src="./img/visa.png" alt="Visa">
+        </div>
+    </div>
+    
+    <script src="./js/partials.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="module" src="./js/shop.js"></script>
+</body>
+
+</html>
