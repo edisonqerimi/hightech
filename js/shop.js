@@ -38,13 +38,13 @@ const getProducts = (products) => {
 
 window.onload = () => {
     
-    if(location.pathname==='/shop.html')
+    if(location.pathname==='/shop.html'||location.pathname==='/shop')
     getProducts(sessionProducts);
 
-    if(location.pathname==='/smartphone.html')
+    if(location.pathname==='/smartphone.html'||location.pathname==='/smartphone')
     getProducts(sessionProducts.filter(p=>p.category==='smartphone'));
 
-    if(location.pathname==='/laptop.html')
+    if(location.pathname==='/laptop.html'||location.pathname==='/laptop')
     getProducts(sessionProducts.filter(p=>p.category==='laptop'));
 }
 
