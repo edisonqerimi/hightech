@@ -13,40 +13,11 @@
 
 <body>
     <nav id="nav"></nav>
-    <div class="sidebar">
-        <svg class="close" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-                fill="currentColor" />
-        </svg>
-        <div class="side-title-container">
-            <a href="index.html" class="side-title">HIGH TECH</a>
-        </div>
 
-        <div class="side-items">
-            <a href="./shop.html" class="item-1 side-row">
-                <div class="side-item">Shop</div>
-            </a>
-            <a href="./laptop.html" class="item-2 side-row">
-                <div class="side-item">Laptop</div>
-            </a>
-            <a href="./smartphone.html" class="item-3 side-row">
-                <div class="side-item">Smartphone</div>
-            </a>
+    <div id="sidebar"></div>
 
-        </div>
+    <div class="banner"></div>
 
-    </div>
-    <div class="banner">
-        <div></div>
-        <div>Free domestic shipping.</div>
-        <svg class="close-banner" width="22" height="22" viewBox="0 0 24 24" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-                fill="currentColor" />
-        </svg>
-    </div>
     <div class="container">
         <div class="grid">
             <div class="main">
@@ -61,41 +32,36 @@
                 </div>
 
             </div>
-            <a id="start-position" href="#" class="photo photo1">
+            <a id="start-position" href="/smartphone.html" class="photo photo1">
                 <div class="img-holder img-holder1"></div>
                 <div class="article1 article">
-                    <div class="article1-title">IPHONE 13 Pro Max</div>
+                    <div class="article1-title">iPhone 13 Pro Max</div>
                     <div class="article1-cmimi">
-                        <span style="text-decoration: line-through; color: #362417;">1299.50&euro;</span> 1199.50&euro;
+                        <span style="text-decoration: line-through; color: #362417;">1199.50&euro;</span> 1150.49&euro;
                     </div>
                 </div>
             </a>
-            <a href="#" class="photo photo2">
+            <a href="/laptop.html" class="photo photo2">
                 <div class="img-holder img-holder2"></div>
                 <div class="article2 article">
                     <div class="article-title">HP ENVY 17t-ch000</div>
                     <div class="cmimi">
-                        <span style="text-decoration: line-through;color:#362417;">1299.50&euro;</span> 1199.50&euro;
+                        <span style="text-decoration: line-through;color:#460D01;">1099.99&euro;</span> 699.99&euro;
                     </div>
                 </div>
             </a>
             <a href="#" class="photo photo3"></a>
         </div>
     </div>
-    <div class="footer">
-        <div>Edison Qerimi - 2022 Open Source</div>
-        <div>
-            <img width="35px" src="./img/mastercard.png" alt="MasterCard">
-            <img width="35px" src="./img/visa.png" alt="Visa">
-        </div>
-    </div>
+
+    <div class="footer"></div>
+
     <script>
         document.querySelector('#start').addEventListener('click', () => {
             document.querySelector('#start-position').scrollIntoView({
                 behavior: 'smooth'
             });
         })
-
     </script>
     <script src="./js/partials.js"></script>
     <script src="./js/index.js"></script>

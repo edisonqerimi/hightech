@@ -18,16 +18,20 @@ a{
     text-decoration: none;
 }
 
+/*
+ Background: 050401
+ Color: FFFAFF
+*/
+
 #nav,.banner,.footer{
-    background: black;
+    background: #050401;
 }
 
 #nav,.banner,.nav-item,.nav-title,.icon-item,.support,.footer{
-    color: white;
+    color: #FFFAFF;
 }
 
 #nav{
-   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,15 +101,8 @@ a{
 
 .nav-item:hover::after{
     width: 100%;
-    background-color: #F4F4F9;
+    background-color: #FFFAFF;
 }
-
-/* .nav-item:hover{
-    color: black;
-    background: white;
-     border-bottom: 2px white solid; 
-}  */
-
 
 .nav-title{
     font-size: 1.8rem;
@@ -159,10 +156,10 @@ a{
     margin: 0 auto; 
 }
 
-.sidebar{
+#sidebar{
     display: none;
     top: 0;
-    background: white;
+    background: #FFFAFF;
     left: 0;
     position: fixed;
     width: 75%;
@@ -192,15 +189,15 @@ a{
 }
 
 .side-title{
-    color:black;
+     color:#050401;
      font-size:1.3rem;
      margin-top: 10px;
      padding: 5px;
 }
 
 .side-title-container{
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .side-items{
@@ -214,9 +211,9 @@ justify-content: center;
 
 .side-row{
     padding: 14px 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #050401;
     text-transform: uppercase;
-    color: black;
+    color: #050401;
 }
 
 .footer{
@@ -241,8 +238,8 @@ justify-content: center;
 
 .btn{
     padding: 10px 8px;
-    background: black;
-    color: white;
+    background: #050401;
+    color: #FFFAFF;
     width: max-content;
     cursor: pointer;
     border-radius: 3px;
@@ -254,24 +251,22 @@ justify-content: center;
 }
 
 .btn:active{
-    box-shadow: 1px 2px black;
+    box-shadow: 1px 1px #050401;
 }
 .btn-info:active{
     box-shadow: 1px 2px #1C5D99;
 }
 
 .btn-info{
-    background: #1C5D99;
-    color: white;
+    background: #307692;
 }
 
 .btn:hover{
-    background: white;
-    color: #222;
+    background: #1e1d1a;
 }
 
 .btn-info:hover{
-    color: #1C5D99;
+    background: #45849d;
 }
 
 @keyframes slide {

@@ -31,14 +31,14 @@
 
 .main-text{
     font-size: 2rem;
-    color: white;
+    color: #fffaff;
     padding: 10px;
 }
 
 
 
 #start{
-   background: #7E7F83;
+   background: #98959B;
     font-size: larger;
     font-weight: 600;
     border-radius: 2px;
@@ -49,7 +49,7 @@
 }
 
 #start:hover{
-    background: #F3F3F4;
+    background: #E6E1E6;
 }
 
 .photo1{
@@ -71,7 +71,7 @@
 .photo{
     position: relative;
     overflow: hidden;
-    color: black;
+    color: #050401;
     display: flex;
     align-items: flex-end;
 }
@@ -89,12 +89,13 @@
     transform: scale(1.2);
 }
 .photo3{
-    background: blueviolet;
+    background: #307692;
     grid-area: third;
 }
 
 .article1-title{
     font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 
@@ -111,7 +112,7 @@
 }
 
 .article{
-    background: rgba(255, 255, 255, 0.85);
+    background: #fffaffb6;
     width: 100%;
     text-align: center;
     padding: 10px;
@@ -121,8 +122,6 @@
     padding: 40px;
 }
 
-
-
 @media screen and (max-width:768px) {
     .grid{
         grid-template-areas: 'main' 'first' 'second' 'third';
@@ -130,19 +129,19 @@
     .photo{
         height: 50vh;
     }
-.article1-title{
-    font-size: 1.5rem;
-}
-.article1-cmimi{
-    font-size: 1.05rem;
-}
-.article1{
-    padding: 10px;
-}
-
-.main-text{
-    font-size: 1.3rem;
-    color: white;
-    padding: 10px;
-}
+    .article1-title{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    .article1-cmimi{
+        font-size: 1.05rem;
+    }
+    .article1{
+        padding: 10px;
+    }
+    .main-text{
+        font-size: 1.3rem;
+        color: white;
+        padding: 10px;
+    }
 }

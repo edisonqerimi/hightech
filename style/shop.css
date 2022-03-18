@@ -6,7 +6,6 @@
     gap: 20px;
 }
 
-
 .categories{
     grid-area: categ;
     display: flex;
@@ -15,13 +14,12 @@
 }
 
 .shop-grid-item,.product{
-    background: #ADB3BC;
+    /* background: #E6E1E6; E3DEE4 */
+    background: #D3CED4;
 }
 
-
-
 .category{
-    color: black;
+    color: #050401;
     padding: 9px 16px;
     position: relative;
     transition: all 0.15s ease-in-out;
@@ -43,7 +41,7 @@
 
 .category:hover:after{
     width: 100%;
-    background-color: black;
+    background-color: #050401;
 }
 
 .category:active::after{
@@ -61,16 +59,16 @@
 }
 
 .filter{
-    color: black;
+    color: #050401;
     padding: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #050401;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .filter:hover{
-    color: #FDFDFD;
+    color: #460D01;
 }
 
 .filter-title{
@@ -119,7 +117,7 @@
 
 .discount{
     text-decoration: line-through;
-    color: rgb(190, 0, 0);
+    color: #460D01;
 }
 .product-price{
     display: flex;

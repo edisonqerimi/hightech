@@ -3,7 +3,7 @@ const products = [
     {
         'id': 1,
         'brand': 'Apple',
-        'model': 'Iphone 13 Pro Max',
+        'model': 'iPhone 13 Pro Max',
         'category': 'smartphone',
         'price': 1199.50,
         'discount': {

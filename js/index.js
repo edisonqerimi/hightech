@@ -14,7 +14,7 @@ function hideTitle(e) {
 }
 
 
-let sidebar = document.querySelector('.sidebar');
+let sidebar = document.querySelector('#sidebar');
 
 let showSidebar = document.getElementsByClassName('show-sidebar');
 
