@@ -24,7 +24,7 @@ const getProducts = (products) => {
             }    
             </div>
             <div class="product-buttons">
-                <a href="#" class="btn btn-info">More info</a>
+                <a href='/details.html?product-id=${s.id}' class="btn btn-info">More info</a>
                 <div class="btn btn-primary">Add to cart</div>
             </div>
         </div>

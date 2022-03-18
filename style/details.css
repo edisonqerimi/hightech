@@ -1,0 +1,35 @@
+.details{
+    height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas: 'photo main'
+                         'photo more'
+                         'photo more';
+
+}
+
+.d-photo{
+    grid-area: photo;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-details{
+    background: #ADB3BC;
+    grid-area: main;
+}
+.more-details{
+    background: #ADB3BC;
+    grid-area: more;
+}
+
+.more-details,.main-details{
+    padding: 30px;
+}
+
+.product-buttons{
+    display: flex;
+    gap: 10px;
+}

@@ -152,8 +152,11 @@ a{
 
 .container{
     min-height: 100vh;
-    /* width: 95%;
-    margin: 0 auto; */
+}
+
+.container-width{
+    width: 95%;
+    margin: 0 auto; 
 }
 
 .sidebar{
@@ -224,6 +227,8 @@ justify-content: center;
     font-size: 0.8rem;
     padding: 10px;
 }
+
+
 
 .side-row:hover{
     color:gray
