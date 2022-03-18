@@ -127,10 +127,9 @@
     .grid{
         grid-template-areas: 'main' 'first' 'second' 'third';
     }
-    .photo,.main{
-        height: 400px;
+    .photo{
+        height: 50vh;
     }
-    
 .article1-title{
     font-size: 1.5rem;
 }

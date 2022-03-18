@@ -225,8 +225,13 @@ justify-content: center;
     padding: 10px;
 }
 
-.side-row:hover .side-item{
+.side-row:hover{
     color:gray
+}
+
+.side-row{
+    display: flex;
+    justify-content: space-between ;
 }
 
 .btn{
@@ -281,10 +286,5 @@ justify-content: center;
     }
     .hamburger{
         display: block;
-    }
-}
-@media screen and (max-width:560px) {
-    .sidebar{
-        width: 100%;
     }
 }

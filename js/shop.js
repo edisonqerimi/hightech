@@ -10,7 +10,6 @@ sessionStorage.setItem('products',JSON.stringify(products));
 let sessionProducts = JSON.parse(sessionStorage.getItem('products'));
 
 const getProducts = (products) => {
-    console.log(products)
     products.map(s => {
         var product = document.createElement('div');
         product.innerHTML = `
@@ -38,13 +37,15 @@ const getProducts = (products) => {
 
 window.onload = () => {
     
-    if(location.pathname==='/shop.html'||location.pathname==='/shop')
+    var path = location.pathname.split('.html')[0];
+
+    if(path==='/shop')
     getProducts(sessionProducts);
 
-    if(location.pathname==='/smartphone.html'||location.pathname==='/smartphone')
+    if(path==='/smartphone')
     getProducts(sessionProducts.filter(p=>p.category==='smartphone'));
 
-    if(location.pathname==='/laptop.html'||location.pathname==='/laptop')
+    if(path==='/laptop')
     getProducts(sessionProducts.filter(p=>p.category==='laptop'));
 }
 
