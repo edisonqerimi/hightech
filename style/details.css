@@ -1,5 +1,4 @@
 .details{
-    height: 100vh;
     display: grid;
     gap: 5px;
     grid-template-columns: 1fr 1.5fr;
@@ -9,6 +8,7 @@
 }
 
 .d-photo{
+    height: 100vh;
     grid-area: photo;
     background-size: contain;
     background-repeat: no-repeat;
@@ -37,9 +37,11 @@
     .details{
         gap: 5px;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(3,50vh) ;
         grid-template-areas: 'photo'
                              'main'
                              'more';
+    }
+    .d-photo,.main-details,.more-details{
+        height: 50vh;
     }
 }
