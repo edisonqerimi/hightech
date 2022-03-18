@@ -6,7 +6,6 @@
     grid-template-areas: 'photo main'
                          'photo more'
                          'photo more';
-
 }
 
 .d-photo{
@@ -32,4 +31,15 @@
 .product-buttons{
     display: flex;
     gap: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .details{
+        gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3,50vh) ;
+        grid-template-areas: 'photo'
+                             'main'
+                             'more';
+    }
 }

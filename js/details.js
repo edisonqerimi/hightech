@@ -23,7 +23,7 @@ document.getElementById('details').innerHTML = `
         `<div class="discount-price">${product.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''
     }    
     </div>
-
+    More to come..
 </div>
 <div class="more-details">
     <div class="product-buttons">
