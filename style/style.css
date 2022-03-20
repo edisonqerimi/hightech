@@ -8,6 +8,7 @@ body{
     /* font-family: 'Lato', sans-serif; */
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+    background-color: #e5e2e5;
 }
 
 *{
@@ -42,6 +43,9 @@ a{
     z-index: 999;
 }
 
+.hidden{
+    display: none;
+}
 
 .banner{
     cursor: default;
@@ -250,16 +254,6 @@ a{
     user-select: none;
 }
 
-.btn:active{
-    box-shadow: 1px 1px #050401;
-}
-.btn-info:active{
-    box-shadow: 1px 2px #1C5D99;
-}
-
-.btn-info{
-    background: #307692;
-}
 
 .btn:hover{
     background: #1e1d1a;
@@ -268,6 +262,17 @@ a{
 .btn-info:hover{
     background: #45849d;
 }
+.btn:active{
+    background: #373634;
+}
+.btn-info:active{
+    background: #6e9fb3;
+}
+
+.btn-info{
+    background: #307692;
+}
+
 
 @keyframes slide {
     from {left: -200px;}

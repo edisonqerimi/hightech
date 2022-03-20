@@ -1,3 +1,4 @@
+
 .shop-grid{
     display: grid;
     grid-template-areas: 'categ categ'
@@ -50,30 +51,116 @@
 
 .product-filter{
     grid-area: filter;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
     gap: 10px;
-    align-self: flex-start;
     min-width: 300px;
 }
 
-.filter{
+.filter,.filter-price{
     color: #050401;
-    padding: 10px;
-    border-bottom: 1px solid #050401;
+    border-bottom: 1px solid #beb9bf;
+}
+.filter-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 8px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.filter:hover{
+.filter-items{
+    background-color: #beb9bf;
+    padding: 10px;
+}
+
+.filter-price{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 14px;
+    gap: 9px;
+}
+
+.filter-item-name{
+    width: 100%;
+}
+
+#price-Input{
+    width: 100%;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    background: #307692;
+    outline: none;
+    height: 10px;
+    opacity: 0.9;
+    border-radius: 4px;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#price-Input:hover {
+    opacity: 1;
+  }
+  
+#price-Input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 23px;
+    border-radius: 3px;
+    background: #050401;
+    cursor: pointer;
+}
+  
+#price-Input::-moz-range-thumb {
+    width: 18px;
+    height: 23px;
+    background: #050401;
+    cursor: pointer;
+}
+
+.price-label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.92rem;
+}
+
+.price-io{
+    display: flex;
+    align-items: center;
+}
+
+
+.filter-check{
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.filter-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.filter-item:last-child{
+    margin-bottom: 0;
+}
+
+.filter-header:hover{
     color: #460D01;
 }
 
 .filter-title{
     text-align: center;
     font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
 
@@ -92,6 +179,10 @@
     height: 200px;
     width: 100%;
     transition: all 0.15s ease-in-out;
+}
+
+.product,.product-filter,.categories{
+    box-shadow: 0px 0px 2px #050401a8;
 }
 
 .product:hover .product-image{
@@ -118,9 +209,12 @@
 .discount{
     text-decoration: line-through;
     color: #460D01;
+    font-size: 1rem;
 }
 .product-price{
+    font-size: 1.1rem;
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
@@ -139,10 +233,14 @@
         gap: 5px;
         padding: 10px;
         justify-content: space-between;
+        width: 100%;
+    }
+    .product-filter{
+        min-height: auto;
+        width: 85%;
     }
     .product-filter,.categories{
         justify-self: center;
-        width: 100%;
     }
     .category-hidden{
         display: none;

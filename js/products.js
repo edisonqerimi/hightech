@@ -6,6 +6,7 @@ const products = [
         'model': 'iPhone 13 Pro Max',
         'category': 'smartphone',
         'price': 1199.50,
+        'color':'black',
         'discount': {
             'isDiscount': true,
             'priceDiscount': 1150.49,
@@ -32,6 +33,7 @@ const products = [
         'model': 'Galaxy S22 Ultra 5G',
         'category': 'smartphone',
         'price': 1149.50,
+        'color':'white',
         'discount': {
             'isDiscount': true,
             'priceDiscount': 1079.50,
@@ -58,6 +60,7 @@ const products = [
         'model': 'Pixel 6 Pro',
         'category': 'smartphone',
         'price': 999.50,
+        'color':'white',
         'discount': {
             'isDiscount': false,
             'priceDiscount': 949.99,
@@ -84,6 +87,7 @@ const products = [
         'model': 'ENVY 17t-ch000',
         'category': 'laptop',
         'price': 1099.99,
+        'color':'black',
         'discount': {
             'isDiscount': true,
             'priceDiscount': 699.99,
@@ -106,6 +110,7 @@ const products = [
         'model': 'ROG Flow Z13 (2022) GZ301ZE',
         'category': 'laptop',
         'price': 1999.99,
+        'color':'black',
         'discount': {
             'isDiscount': false,
             'priceDiscount': 1990.99,
