@@ -90,6 +90,10 @@
     gap: 9px;
 }
 
+.filter-name{
+    text-transform: capitalize;
+}
+
 .filter-item-name{
     width: 100%;
 }

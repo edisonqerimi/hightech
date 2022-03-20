@@ -1,11 +1,9 @@
 
-import { products } from './products.js'
+let params = new window.URLSearchParams(window.location.search);
 
-var productsElement = document.querySelector('#products');
+let filterBy = params.get('filter-by');
+let filterValue = params.get('filter-value');
 
-if (sessionStorage.getItem('products') === null) {
-    sessionStorage.setItem('products', JSON.stringify(products));
-}
 
 let sessionProducts = JSON.parse(sessionStorage.getItem('products'));
 
@@ -14,43 +12,41 @@ const bindProducts = (products) => {
         products.map(s => {
             var product = document.createElement('div');
             product.innerHTML = `
-        <div class="product">
-        <div style="background-image: url('${s.img}');" class="product-image"></div>
-        <div class="product-body">
-            <div class="product-title">${s.brand} ${s.model}</div>
-            <div class="product-price">
-            ${s.discount.isDiscount ?
+            <div class="product">
+            <div style="background-image: url('${s.img}');" class="product-image"></div>
+            <div class="product-body">
+                <div class="product-title">${s.brand} ${s.model}</div>
+                <div class="product-price">
+                ${s.discount.isDiscount ?
                     `<div class="discount-price">${s.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''
                 }   
-            <div class='${s.discount.isDiscount ? "discount" : ''}'>${s.price.toFixed(2)} &euro;</div>
+                <div class='${s.discount.isDiscount ? "discount" : ''}'>${s.price.toFixed(2)} &euro;</div>
+                </div>
+                <div class="product-buttons">
+                    <a href='/details.html?product-id=${s.id}' class="btn product-btn">More info</a>
+                    <div class="btn btn-info product-btn">Add to cart</div>
+                </div>
             </div>
-            <div class="product-buttons">
-                <a href='/details.html?product-id=${s.id}' class="btn product-btn">More info</a>
-                <div class="btn btn-info product-btn">Add to cart</div>
-            </div>
-        </div>
-        `;
-            productsElement.appendChild(product);
+            `;
+            document.querySelector('#products').appendChild(product);
         })
     }
     else {
-        productsElement.innerHTML = '<div>No products found</div>';
+        document.querySelector('#products').innerHTML = '<div>No products found</div>';
     }
 }
 
 
 
 
-const filterNames = ['Brand', 'Color'];
-
-const bindFiltering = (products) => {
+const bindFiltering = (products, filterNames) => {
 
     filterNames.map(item => {
         var filterElement = document.createElement('div');
         filterElement.classList.add('filter')
         filterElement.innerHTML = `
         <div class="filter-header">
-            <div>${item}</div>
+            <div class='filter-name'>${item}</div>
             <div>
                 <svg class='plus' width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -66,18 +62,30 @@ const bindFiltering = (products) => {
                 </svg>
             </div>
         </div>
-        <form class='filter-items hidden'></form>
+        <form class='filter-items hidden'>
+            <input value=${item} name='filter-by' type='hidden'/>
+        </form>
     `;
         document.querySelector('.product-filter').appendChild(filterElement)
-        products.map(prod => prod[`${item.toLowerCase()}`]).filter((value, index, self) => {
+        var filterItems = filterElement.querySelector('.filter-items');
+        products.map(prod => prod[item]).filter((value, index, self) => {
             if (self.indexOf(value) === index) {
                 var filterItem = document.createElement('div');
-                filterItem.classList.add('filter-item')
-                filterItem.innerHTML = `
-                    <label for='check-${value}' class="filter-item-name">${value}</label>
-                    <input class="filter-check" type="checkbox" name="" id='check-${value}'>
-            `;
-                filterElement.querySelector('.filter-items').appendChild(filterItem);
+                var label = document.createElement('label');
+                var input = document.createElement('input');
+                filterItem.classList.add('filter-item');
+                label.classList.add('filter-item-name');
+                label.htmlFor = input.id = `check-${value}`;
+                label.innerHTML = input.value = value;
+                input.classList.add('filter-check');
+                input.type = 'checkbox';
+                input.name = 'filter-value';
+                input.onclick = (e) => {
+                    filterItems.submit();
+                }
+                filterItem.appendChild(label);
+                filterItem.appendChild(input);
+                filterItems.appendChild(filterItem);
             }
         }
         )
@@ -87,34 +95,26 @@ const bindFiltering = (products) => {
 
 window.onload = () => {
 
-
     var path = location.pathname.split('.html')[0];
     let products = sessionProducts;
     switch (path) {
-        case '/shop':
-            bindProducts(products);
-            break;
         case '/smartphone':
-            products = sessionProducts.filter(p => p.category === 'smartphone');
-            bindProducts(products);
+            products = products.filter(p => p.category === 'smartphone');
             break;
         case '/desktops':
-            products = sessionProducts.filter(p => p.category === 'desktop');
-            bindProducts(products);
+            products = products.filter(p => p.category === 'desktop');
             break;
         case '/accessories':
-            products = sessionProducts.filter(p => p.category === 'accessory');
-            bindProducts(products);
+            products = products.filter(p => p.category === 'accessory');
             break;
         case '/laptop':
-            products = sessionProducts.filter(p => p.category === 'laptop');
-            bindProducts(products);
+            products = products.filter(p => p.category === 'laptop');
             break;
         default:
             break;
     }
-
-    bindFiltering(products);
+    bindFiltering(products, ['brand', 'color']);
+    bindProducts(products.filter((p) => p[filterBy] == filterValue));
 
     const filterHeader = document.querySelectorAll('.filter-header');
     const pluses = document.querySelectorAll('.plus');
