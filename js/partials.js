@@ -68,18 +68,35 @@ document.getElementById('sidebar').innerHTML = `
     <div class="side-title-container">
         <a href="index.html" class="side-title">HIGH TECH</a>
     </div>
-
+    <div class="account-items">
+        <div class="login-register">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+        <div class="settings-logout">
+            <a href="#">Account</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
     <div class="side-items">
         <a href="./shop.html" class="item-1 side-row">
-            <div class="side-item">Shop</div>
+            <div class="side-item">All categories</div>
+        </a>
+
+        <a href="./desktops.html" class="item-2 side-row">
+            <div class="side-item">Desktops</div>
         </a>
 
         <a href="./laptop.html" class="item-2 side-row">
-            <div class="side-item">Laptop</div>
+            <div class="side-item">Laptops</div>
         </a>
 
         <a href="./smartphone.html" class="item-3 side-row">
-            <div class="side-item">Smartphone</div>
+            <div class="side-item">Smartphones</div>
+        </a>
+
+        <a href="./accessories.html" class="item-3 side-row">
+            <div class="side-item">Accessories</div>
         </a>
     </div>
 `

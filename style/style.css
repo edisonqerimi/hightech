@@ -156,7 +156,7 @@ a{
 }
 
 .container-width{
-    width: 95%;
+    width: 90%;
     margin: 0 auto; 
 }
 
@@ -167,6 +167,7 @@ a{
     left: 0;
     position: fixed;
     width: 75%;
+    padding: 0 15px;
     height: 100vh;
     animation-name: slide;
     animation-duration: 0.4s;
@@ -194,9 +195,27 @@ a{
 
 .side-title{
      color:#050401;
-     font-size:1.3rem;
-     margin-top: 10px;
+     font-size:1.5rem;
+     margin: 10px 0;
      padding: 5px;
+}
+
+.account-items a{
+    color: #050401;
+    padding:10px;
+    transition: all 0.15s ease-in-out;
+}
+.account-items a:hover{
+    background: #1e1d1a;
+    color: #FFFAFF;
+    padding:10px;
+}
+
+
+.login-register,.settings-logout{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .side-title-container{
@@ -205,17 +224,14 @@ a{
 }
 
 .side-items{
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap:20px;
-    font-size: 0.8rem;
+    gap:15px;
     font-weight: 600;
 }
 
 .side-row{
-    padding: 14px 20px;
-    border-bottom: 1px solid #050401;
+    padding: 10px;
     text-transform: uppercase;
     color: #050401;
 }
@@ -229,10 +245,8 @@ a{
     padding: 10px;
 }
 
-
-
 .side-row:hover{
-    color:gray
+    color:#464542;
 }
 
 .side-row{
@@ -241,7 +255,7 @@ a{
 }
 
 .btn{
-    padding: 10px 8px;
+    padding: 9px 8px;
     background: #050401;
     color: #FFFAFF;
     width: max-content;
@@ -254,24 +268,42 @@ a{
     user-select: none;
 }
 
-
-.btn:hover{
-    background: #1e1d1a;
-}
-
-.btn-info:hover{
-    background: #45849d;
-}
-.btn:active{
-    background: #373634;
-}
-.btn-info:active{
-    background: #6e9fb3;
+.product-btn{
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
 
 .btn-info{
     background: #307692;
 }
+
+.btn-red{
+    background: #A0351F;
+}
+
+.btn:hover{
+    background: #1e1d1a;
+}
+
+.btn:active{
+    background: #373634;
+}
+
+.btn-info:hover{
+    background: #45849d;
+}
+
+.btn-info:active{
+    background: #6e9fb3;
+}
+.btn-red:hover{
+    background: #BF3E25;
+}
+
+.btn-red:active{
+    background: #FC5130;
+}
+
 
 
 @keyframes slide {

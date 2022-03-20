@@ -1,36 +1,90 @@
 .details{
     display: grid;
-    gap: 5px;
+    gap: 10px;
     grid-template-columns: 1fr 1.5fr;
     grid-template-areas: 'photo main'
-                         'photo more'
-                         'photo more';
+                         'more .';
+    padding: 30px 0;
 }
 
 .d-photo{
-    height: 100vh;
+    height: 40vh;
     grid-area: photo;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+.main-details,.more-details,.d-photo{ 
+    background-color: #D3CED4;
+    box-shadow: 0px 0px 1px #050401a8;
+}
+
 .main-details{
-    background: #D3CED4;
     grid-area: main;
 }
 .more-details{
-    background: #D3CED4;
     grid-area: more;
 }
 
 .more-details,.main-details{
     padding: 30px;
+    color: #050401;
+}
+
+.more-title{
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #beb9bf;
+    margin-bottom: 12px;
+}
+
+.detail{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.detail-name{
+    font-weight: 500;
 }
 
 .product-buttons{
     display: flex;
     gap: 10px;
+    align-self: flex-end;
+}
+
+.product-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.main-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-first{
+    border-bottom: 1px solid #beb9bf;
+    padding-bottom: 10px;
+}
+
+.discount{
+    text-decoration: line-through;
+    color: #460D01;
+    font-size: 1.1rem;
+}
+.product-price{
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 @media screen and (max-width:768px) {

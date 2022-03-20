@@ -25,8 +25,8 @@ const bindProducts = (products) => {
             <div class='${s.discount.isDiscount ? "discount" : ''}'>${s.price.toFixed(2)} &euro;</div>
             </div>
             <div class="product-buttons">
-                <a href='/details.html?product-id=${s.id}' class="btn btn-info">More info</a>
-                <div class="btn btn-primary">Add to cart</div>
+                <a href='/details.html?product-id=${s.id}' class="btn product-btn">More info</a>
+                <div class="btn btn-info product-btn">Add to cart</div>
             </div>
         </div>
         `;
@@ -66,7 +66,7 @@ const bindFiltering = (products) => {
                 </svg>
             </div>
         </div>
-        <div class='filter-items hidden'></div>
+        <form class='filter-items hidden'></form>
     `;
         document.querySelector('.product-filter').appendChild(filterElement)
         products.map(prod => prod[`${item.toLowerCase()}`]).filter((value, index, self) => {
