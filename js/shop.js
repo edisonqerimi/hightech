@@ -4,15 +4,15 @@ let params = new window.URLSearchParams(window.location.search);
 let filterBy = params.get('filter-by');
 let filterValue = params.get('filter-value');
 
+let productsElement = document.querySelector('#products');
 
-let sessionProducts = JSON.parse(sessionStorage.getItem('products'));
 
 const bindProducts = (products) => {
     if (products.length > 0) {
         products.map(s => {
             var product = document.createElement('div');
+            product.classList.add('product')
             product.innerHTML = `
-            <div class="product">
             <div style="background-image: url('${s.img}');" class="product-image"></div>
             <div class="product-body">
                 <div class="product-title">${s.brand} ${s.model}</div>
@@ -26,13 +26,12 @@ const bindProducts = (products) => {
                     <a href='/details.html?product-id=${s.id}' class="btn product-btn">More info</a>
                     <div class="btn btn-info product-btn">Add to cart</div>
                 </div>
-            </div>
-            `;
-            document.querySelector('#products').appendChild(product);
+                `;
+            productsElement.appendChild(product);
         })
     }
     else {
-        document.querySelector('#products').innerHTML = '<div>No products found</div>';
+        productsElement.innerHTML = '<div>No products found</div>';
     }
 }
 
@@ -95,6 +94,7 @@ const bindFiltering = (products, filterNames) => {
 
 window.onload = () => {
 
+    let sessionProducts = JSON.parse(sessionStorage.getItem('products'));
     var path = location.pathname.split('.html')[0];
     let products = sessionProducts;
     switch (path) {
