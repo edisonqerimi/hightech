@@ -43,10 +43,6 @@ a{
     z-index: 999;
 }
 
-.hidden{
-    display: none;
-}
-
 .banner{
     cursor: default;
     text-align: center;
@@ -124,24 +120,126 @@ a{
     align-items: center;
 }
 
-.search-item,.profile,.cart{
+.profile,.cart{
     padding:5px 10px;
     cursor: pointer;
 }
-
+.search-item{
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+}
 .search{
     transition: transform 0.3s ease-in-out;
-   
 }
-.search-item:hover .search{
- transform: rotate(90deg);
+.search-input{
+    top: 0;
+    cursor: text;
+    outline: none;
+    height: 30px;
+    font-size: 0.9rem;
+    color: #050401;
+    background-color: #D3CED4;
+    border: 0;
+    border-radius: 1px;
+    margin: 0;
+    animation: slide-search 0.15s forwards;
 }
 
-.icon-item{
+.nav-end{
+    position: relative;
+}
+
+.account-container{
+    height: 150px;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.account-icon{
+    color: #050401;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+}
+
+.account-icon>a{
+    padding:5px 10px;
+    transition: all 0.12s ease-in-out;
+}
+
+.account-icon:hover > a{
+    background: #050401;
+    color: #FFFAFF;
+}
+
+.account-navbar{
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFAFF;
+    padding: 20px 30px;
+    animation: opacity 0.15s ease;
+    box-shadow: 0px 2px 8px #050401;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 100%;
+      }
+  }
+
+.loggedin-nav,.loggedout-nav{
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.account-icon > svg{   
+    transition: all 0.15s ease-in-out;
+}
+.login:hover > svg{
+    transform: translateX(2px);
+}
+.register:hover > svg{
+    transform: scale(110%)
+}
+
+.account-navbar a{
+    color: #050401;
+}
+.profile{
+    position: relative;
+}
+
+
+.search-item:hover .search{
+    transform: translateY(-2px);
+}
+
+@keyframes slide-search {
+    from {
+        clip-path: inset(0 0 0 100%);
+      }
+      to {
+        clip-path: inset(0 0 0 0);
+      }
+  }
+
+.cart{
     transition: transform 0.17s ease-in;
 }
 
-.icon-item:hover{
+.cart:hover{
     transform: translateY(-2px);
 }
 
@@ -304,6 +402,9 @@ a{
     background: #FC5130;
 }
 
+.hidden{
+    display: none;
+}
 
 
 @keyframes slide {

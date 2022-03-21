@@ -60,7 +60,7 @@ window.onload = () => {
         moreBody.innerHTML = `
         ${detail('Processor', details.processor)}
         ${detail('Graphics', details.graphics)}
-        ${detail('RAM', details.ram + 'GB')}
+        ${detail('RAM', details.ram)}
         ${detail('Screen size', details.screenSize)}
         ${detail('Display', details.display)}
         ${detail('Storage', details.storage)}
