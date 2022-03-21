@@ -13,7 +13,7 @@ const products = [
         },
         'stock': true,
         'amount': 30,
-        'img': 'http://assets.stickpng.com/images/61d2f85b92b57c0004c64745.png',
+        'img': './img/iphone13promax.png',
         'productDetails': {
             'soC': 'A14 Bionic',
             'ram':6,
@@ -40,7 +40,7 @@ const products = [
         },
         'discount': true,
         'amount': 20,
-        'img': 'https://mypreordercontent.azureedge.net/my-rainbow-preorder-11416/public/images/s22ultra_green_v1_03.png',
+        'img': './img/s22ultra_green.png',
         'productDetails': {
             'soC': 'Exynos 2200',
             'ram':12,
@@ -67,7 +67,7 @@ const products = [
         },
         'stock': true,
         'amount': 20,
-        'img': 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6483/6483635_sd.jpg;maxHeight=640;maxWidth=550',
+        'img': './img/pixel6pro.jpg',
         'productDetails': {
             'soC': 'Google Tensor',
             'ram':12,
@@ -93,7 +93,7 @@ const products = [
             'priceDiscount': 699.99,
         },
         'amount': 40,
-        'img': 'https://www.hp.com/us-en/shop/app/assets/images/product/24L48AV_1/center_facing.png?_=1637663766555&imwidth=270&imdensity=1',
+        'img': './img/envy.png',
         'productDetails': {
             'processor': 'Intel® Core™ i7-1165G7',
             'graphics':'Intel® Iris® Xe Graphics',
@@ -116,7 +116,7 @@ const products = [
             'priceDiscount': 1990.99,
         },
         'amount': 15,
-        'img': 'https://dlcdnwebimgs.asus.com/gain/932397FC-538C-4318-BFF4-E530EDADAE2D/w1000/h732',
+        'img': './img/asusrogflow.png',
         'productDetails': {
             'processor': 'Intel®Core™ i9-12900H',
             'graphics':'NVIDIA®GeForce RTX™ 3050 Ti',
