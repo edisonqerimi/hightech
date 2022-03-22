@@ -1,4 +1,4 @@
-
+const returnUrl = window.location.pathname;
 
 document.getElementById('nav').innerHTML = `
         <svg class="hamburger show-sidebar" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -19,17 +19,17 @@ document.getElementById('nav').innerHTML = `
 
             <div class="items">
                 <a href="./shop.html" class="nav-item">Shop</a>
-                <a href="#" class="nav-item support">Support</a>
+                <a href="#" class="nav-item">Support</a>
             </div>
         </div>
 
         <div class="nav-end">
 
+            <form action="/search.html">
+            <input class='search-input hidden' name='search' placeholder='search'/>
+            </form>
+    
             <div class="search-item">
-                <form action="/search.html">
-                    <input class='search-input hidden' name='search' placeholder='search'/>
-                </form>
-                
                 <svg class="search" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -38,7 +38,7 @@ document.getElementById('nav').innerHTML = `
                 </svg>
             </div>
 
-            <div href="#" class="profile icon-item">
+            <div class="profile icon-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="outside" fill-rule="evenodd" clip-rule="evenodd"
                         d="M16 9C16 11.2091 14.2091 13 12 13C9.79086 13 8 11.2091 8 9C8 6.79086 9.79086 5 12 5C14.2091 5 16 6.79086 16 9ZM14 9C14 10.1046 13.1046 11 12 11C10.8954 11 10 10.1046 10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9Z"
@@ -51,16 +51,21 @@ document.getElementById('nav').innerHTML = `
             <div class='account-container hidden'>
             <div class='account-navbar'>
                 <div class="loggedout-nav">
-                  <div class='login account-icon'>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H8V9H6V3H22V21H6V15H8V19H20V5Z" fill="currentColor" />
-                    <path d="M13.0743 16.9498L11.6601 15.5356L14.1957 13H2V11H14.1956L11.6601 8.46451L13.0743 7.05029L18.024 12L13.0743 16.9498Z" fill="currentColor" />
-                    </svg>
-                    <a href="#">Login</a>
-                 </div>
-                  <div class='register account-icon'>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z" fill="currentColor" /></svg>
-                    <a href="#">Register</a>
+                  <div>
+                    <a class='account-icon login' href="./login.html?returnUrl=${returnUrl}">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H8V9H6V3H22V21H6V15H8V19H20V5Z" fill="currentColor" />
+                        <path d="M13.0743 16.9498L11.6601 15.5356L14.1957 13H2V11H14.1956L11.6601 8.46451L13.0743 7.05029L18.024 12L13.0743 16.9498Z" fill="currentColor" />
+                        </svg>
+                        <div>Log in</div>
+                    </a>
+                  </div>
+                  <div>
+                        <a class='account-icon register' href="./register.html">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z" fill="currentColor" />
+                        </svg>
+                        <div>Register</div>
+                    </a>
                  </div>
                 </div>
                 <div class="loggedin-nav hidden">
@@ -93,8 +98,8 @@ document.getElementById('sidebar').innerHTML = `
     </div>
     <div class="account-items">
         <div class="login-register">
-            <a href="#">Login</a>
-            <a href="#">Register</a>
+            <a href="./login.html">Login</a>
+            <a href="./register.html">Register</a>
         </div>
         <div class="settings-logout">
             <a href="#">Account</a>

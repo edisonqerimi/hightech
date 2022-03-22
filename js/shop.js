@@ -1,10 +1,10 @@
 
-let params = new window.URLSearchParams(window.location.search);
+const params = new window.URLSearchParams(window.location.search);
 
-let filterBy = params.get('filter-by');
-let filterValue = params.get('filter-value');
+const filterBy = params.get('filter-by');
+const filterValue = params.get('filter-value');
 
-let productsElement = document.querySelector('#products');
+const productsElement = document.querySelector('#products');
 
 
 const bindProducts = (products) => {
@@ -66,37 +66,26 @@ const bindFiltering = (products, filterNames) => {
         </form>
     `;
         document.querySelector('.product-filter').appendChild(filterElement)
-        var filterItems = filterElement.querySelector('.filter-items');
+        const filterItems = filterElement.querySelector('.filter-items');
         products.map(prod => prod[item]).filter((value, index, self) => {
             if (self.indexOf(value) === index) {
-                var filterItem = document.createElement('div');
-                var label = document.createElement('label');
-                var input = document.createElement('input');
+                const filterItem = document.createElement('div');
                 filterItem.classList.add('filter-item');
-                label.classList.add('filter-item-name');
-                label.htmlFor = input.id = `check-${value}`;
-                label.innerHTML = input.value = value;
-                input.classList.add('filter-check');
-                input.type = 'checkbox';
-                input.name = 'filter-value';
-                input.onclick = (e) => {
-                    filterItems.submit();
-                }
-                filterItem.appendChild(label);
-                filterItem.appendChild(input);
+                filterItem.innerHTML = `
+                    <label class='filter-item-name' for='check-${value}'>${value}</label>
+                    <input onclick='this.form.submit()' type='checkbox' id='check-${value}' class='filter-check' value='${value}' name='filter-value' />
+                `;
                 filterItems.appendChild(filterItem);
             }
         }
         )
-
     });
 }
 
 window.onload = () => {
 
-    let sessionProducts = JSON.parse(sessionStorage.getItem('products'));
-    var path = location.pathname.split('.html')[0];
-    let products = sessionProducts;
+    let products = JSON.parse(sessionStorage.getItem('products'));
+    const path = location.pathname.split('.html')[0];
     switch (path) {
         case '/smartphone':
             products = products.filter(p => p.category === 'smartphone');
@@ -131,7 +120,7 @@ window.onload = () => {
             filterItems[i].classList.toggle('hidden');
         }
     })
-    var prices = products.map(p => p.discount.isDiscount ? p.discount.priceDiscount : p.price);
+    const prices = products.map(p => p.discount.isDiscount ? p.discount.priceDiscount : p.price);
 
     const maxPrice = Math.max.apply(Math, prices);
     const minPrice = Math.min.apply(Math, prices);
@@ -147,7 +136,7 @@ window.onload = () => {
     priceInput.oninput = (e) => {
         const max = parseInt(e.target.value) + 2;
         outputPrice.innerHTML = `${Math.round(e.target.value)} &euro;`;
-        let newProducts = products.filter(p => p.discount.isDiscount ? p.discount.priceDiscount <= max : p.price <= max);
+        const newProducts = products.filter(p => p.discount.isDiscount ? p.discount.priceDiscount <= max : p.price <= max);
         productsElement.innerHTML = '';
         bindProducts(newProducts);
     }

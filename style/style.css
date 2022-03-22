@@ -142,7 +142,7 @@ a{
     height: 30px;
     font-size: 0.9rem;
     color: #050401;
-    background-color: #D3CED4;
+    background-color: #FFFAFF;
     border: 0;
     border-radius: 1px;
     margin: 0;
@@ -154,10 +154,10 @@ a{
 }
 
 .account-container{
-    height: 150px;
+    height: 135px;
     position: absolute;
     top: 30px;
-    right: 0px;
+    left: -65px;
     display: flex;
     align-items: flex-end;
 }
@@ -167,15 +167,14 @@ a{
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 5px;
+    padding: 10px 15px;
 }
 
 .account-icon>a{
-    padding:5px 10px;
     transition: all 0.12s ease-in-out;
 }
 
-.account-icon:hover > a{
+.account-icon:hover{
     background: #050401;
     color: #FFFAFF;
 }
@@ -185,9 +184,9 @@ a{
     display: flex;
     flex-direction: column;
     background: #FFFAFF;
-    padding: 20px 30px;
+    padding: 15px 30px;
     animation: opacity 0.15s ease;
-    box-shadow: 0px 2px 8px #050401;
+    box-shadow: 0px 2px 4px #05040159;
 }
 
 @keyframes opacity {
@@ -200,7 +199,7 @@ a{
   }
 
 .loggedin-nav,.loggedout-nav{
-    gap: 12px;
+    gap: 9px;
     display: flex;
     flex-direction: column;
 }
@@ -224,6 +223,10 @@ a{
 
 .search-item:hover .search{
     transform: translateY(-2px);
+}
+
+.validation{
+    color: #BF3E25;
 }
 
 @keyframes slide-search {
@@ -359,6 +362,8 @@ a{
     width: max-content;
     cursor: pointer;
     border-radius: 3px;
+    border: 0;
+    font-size: 1rem;
     transition: all 0.13s ease-in-out;
     -webkit-user-select: none;
     -moz-user-select: none;

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Tech - Login</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+
+<body>
+    <nav id="nav"></nav>
+    <div id="sidebar"></div>
+    <div style="display: none;" class="banner"></div>
+    <div class="container cont-center">
+        <form class="login-form" action="">
+            <div class="login-header">
+                <div class="login-title">Log in</div>
+                <div class="no-account">
+                    No account?
+                    <a href="./register.html" class="registernow">Sign Up</a>.
+                </div>
+            </div>
+            <div class="validation"></div>
+            <div class="login-item">
+                <label for="username">Username</label>
+                <input placeholder="Enter username" class="login-input" name="username" id="username" />
+            </div>
+            <div class="login-item">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter password" class="login-input" name="password" id="password" />
+            </div>
+            <div class="buttons">
+                <a href="./" class="btn">Back</a>
+                <button class="btn btn-info">Login</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer"></div>
+    <script src="./js/partials.js"></script>
+    <script type="module" src="./js/initUsers.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

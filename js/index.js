@@ -13,8 +13,8 @@ function hideTitle(e) {
     }
 }
 
-var searchInput = document.querySelector('.search-input');
-var account = document.querySelector('.account-container');
+const searchInput = document.querySelector('.search-input');
+const account = document.querySelector('.account-container');
 
 document.querySelector('.search-item').onclick = (e)=>{
     searchInput.classList.toggle('hidden');
@@ -28,11 +28,11 @@ document.querySelector('.profile').onmouseleave = () =>{
     account.style.display = 'none';
 }
 
-let sidebar = document.querySelector('#sidebar');
+const sidebar = document.querySelector('#sidebar');
 
-let showSidebar = document.getElementsByClassName('show-sidebar');
+const showSidebar = document.getElementsByClassName('show-sidebar');
 
-let length = showSidebar.length;
+const length = showSidebar.length;
 
 for (let i = 0; i < length; i++) {
     showSidebar[i].addEventListener('click', () => {

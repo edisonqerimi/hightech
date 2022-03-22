@@ -1,6 +1,6 @@
 
-let params = new window.URLSearchParams(window.location.search);
-let id = params.get('product-id')
+const params = new window.URLSearchParams(window.location.search);
+const id = params.get('product-id')
 
 const detail = (name, value) => {
     return `<div class='detail'>
@@ -10,9 +10,9 @@ const detail = (name, value) => {
 }
 
 window.onload = () => {
-    let products = JSON.parse(sessionStorage.getItem('products'));
+    const products = JSON.parse(sessionStorage.getItem('products'));
 
-    let product = products.find(p => p.id == id);
+    const product = products.find(p => p.id == id);
 
     document.getElementById('details').innerHTML = `
     <div style="background-image:url('${product.img}')" class="d-photo">
