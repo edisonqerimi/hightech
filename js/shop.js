@@ -1,4 +1,4 @@
-
+import { bindProducts } from "./products.js";
 const params = new window.URLSearchParams(window.location.search);
 
 const filterBy = params.get('filter-by');
@@ -7,33 +7,7 @@ const filterValue = params.get('filter-value');
 const productsElement = document.querySelector('#products');
 
 
-const bindProducts = (products) => {
-    if (products.length > 0) {
-        products.map(s => {
-            var product = document.createElement('div');
-            product.classList.add('product')
-            product.innerHTML = `
-            <div style="background-image: url('${s.img}');" class="product-image"></div>
-            <div class="product-body">
-                <div class="product-title">${s.brand} ${s.model}</div>
-                <div class="product-price">
-                ${s.discount.isDiscount ?
-                    `<div class="discount-price">${s.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''
-                }   
-                <div class='${s.discount.isDiscount ? "discount" : ''}'>${s.price.toFixed(2)} &euro;</div>
-                </div>
-                <div class="product-buttons">
-                    <a href='/details.html?product-id=${s.id}' class="btn product-btn">More info</a>
-                    <div class="btn btn-info product-btn">Add to cart</div>
-                </div>
-                `;
-            productsElement.appendChild(product);
-        })
-    }
-    else {
-        productsElement.innerHTML = '<div>No products found</div>';
-    }
-}
+
 
 
 
@@ -103,7 +77,7 @@ window.onload = () => {
             break;
     }
     bindFiltering(products, ['brand', 'color']);
-    bindProducts(products.filter((p) => p[filterBy] == filterValue));
+    bindProducts(products.filter((p) => p[filterBy] == filterValue),productsElement);
 
     const filterHeader = document.querySelectorAll('.filter-header');
     const pluses = document.querySelectorAll('.plus');
@@ -138,8 +112,7 @@ window.onload = () => {
         outputPrice.innerHTML = `${Math.round(e.target.value)} &euro;`;
         const newProducts = products.filter(p => p.discount.isDiscount ? p.discount.priceDiscount <= max : p.price <= max);
         productsElement.innerHTML = '';
-        bindProducts(newProducts);
+        bindProducts(newProducts,productsElement);
     }
 
 }
-

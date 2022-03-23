@@ -169,5 +169,32 @@ const products = [
     }
 ];
 
-export { products }
+const bindProducts = (products,element) => {
+    if (products.length > 0) {
+        products.map(s => {
+            var product = document.createElement('div');
+            product.classList.add('product')
+            product.innerHTML = `
+            <div style="background-image: url('${s.img}');" class="product-image"></div>
+            <div class="product-body">
+                <div class="product-title">${s.brand} ${s.model}</div>
+                <div class="product-price">
+                ${s.discount.isDiscount ?
+                    `<div class="discount-price">${s.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''
+                }   
+                <div class='${s.discount.isDiscount ? "discount" : ''}'>${s.price.toFixed(2)} &euro;</div>
+                </div>
+                <div class="product-buttons">
+                    <a href='/details.html?product-id=${s.id}' class="btn product-btn">More info</a>
+                    <div class="btn btn-info product-btn">Add to cart</div>
+                </div>
+                `;
+            element.appendChild(product);
+        })
+    }
+    else {
+        element.innerHTML = '<div>No products found</div>';
+    }
+}
+export { products,bindProducts }
 

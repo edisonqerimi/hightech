@@ -45,8 +45,13 @@ document.querySelector('.close').addEventListener('click', () => {
     sidebar.style.display = 'none';
 })
 
+if (JSON.parse(sessionStorage.getItem('banner-closed'))) {
+    document.querySelector('.banner').style.display = 'none';
+}
+
 document.querySelector('.close-banner').addEventListener('click', () => {
     document.querySelector('.banner').style.display = 'none';
+    sessionStorage.setItem('banner-closed', true);
 })
 
 window.addEventListener('resize', (e) => {
@@ -93,4 +98,3 @@ if (currentUser != null) {
         `;
     }
 }
-

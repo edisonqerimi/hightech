@@ -2,12 +2,12 @@
 
 // const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
 
-if(currentUser!=null){
-    if(currentUser.role!=='admin'){
+if (currentUser != null) {
+    if (currentUser.role !== 'admin') {
         window.location = './index.html'
     }
 }
-else{
+else {
     window.location = './index.html'
 }
 
@@ -16,6 +16,7 @@ const validEdit = document.getElementById('validEdit')
 
 const editModal = document.querySelector('#editModal')
 const deleteModal = document.querySelector('#deleteModal')
+const validDelete = document.querySelector('#validDelete')
 
 
 let editedFirst = document.querySelector('#editedFirst')
@@ -31,6 +32,7 @@ const fetchUsers = () => {
         <tr class='table-head'>
           <th>Id</th>
           <th>Username</th>
+          <th>Role</th>
           <th>First name</th>
           <th>Last name</th>
           <th>Email</th>
@@ -47,6 +49,7 @@ const fetchUsers = () => {
             row.innerHTML = `
         <td>${user.id}</td>
         <td>${user.username}</td>
+        <td>${user.role}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.email}</td>
@@ -95,13 +98,19 @@ const handleEdit = (id) => {
 const handleDelete = (id) => {
     deleteModal.classList.remove('hidden');
     let users = JSON.parse(sessionStorage.getItem('users'));
-    const user = users.find(u=>u.id == id);
+    const user = users.find(u => u.id == id);
     document.querySelector('.deleteTitle').innerHTML = user.username;
+    validDelete.innerHTML = ''
     document.querySelector('#deleteUser').onclick = () => {
-        users = users.filter(user => user.id !== id)
-        sessionStorage.setItem('users', JSON.stringify(users));
-        fetchUsers()
-        deleteModal.classList.add('hidden');
+        if (user.role === 'admin') {
+            validDelete.innerHTML = 'User with admin role cannot be removed!'
+        }
+        else {
+            users = users.filter(user => user.id !== id)
+            sessionStorage.setItem('users', JSON.stringify(users));
+            fetchUsers()
+            deleteModal.classList.add('hidden');
+        }
     }
 }
 
@@ -116,5 +125,5 @@ window.onload = () => {
     document.querySelector('#hideDelete').onclick = () => {
         deleteModal.classList.add('hidden');
     }
-    
+
 }

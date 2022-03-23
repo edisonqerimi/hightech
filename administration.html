@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./style/admin.css">
     <title>HIGH Tech - Administration</title>
 </head>
+
 <body>
     <nav id="nav"></nav>
     <nav id="sidebar"></nav>
@@ -41,13 +43,14 @@
         <div id="deleteModal" class="modal hidden">
             <div class="center-modal">
                 <div class="form">
-                     <h3>Are you sure you want to remove user <span class="validation deleteTitle"></span>?</h3>
-                <div class="buttons">
-                    <button id="deleteUser" class="btn btn-red">Delete user</button>
-                    <button id="hideDelete" class="btn">Cancel</button>
+                    <h3 style="margin: 0;">Are you sure you want to remove user <span class="validation deleteTitle"></span>?</h3>
+                    <div class="validation" id="validDelete"></div>
+                    <div class="buttons">
+                        <button id="deleteUser" class="btn btn-red">Delete user</button>
+                        <button id="hideDelete" class="btn">Cancel</button>
+                    </div>
                 </div>
-                </div>
-               
+
             </div>
         </div>
         <div id="table"></div>
@@ -58,4 +61,5 @@
     <script src="./js/index.js"></script>
     <script src="./js/administration.js"></script>
 </body>
+
 </html>
