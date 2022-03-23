@@ -95,7 +95,7 @@ const handleEdit = (id) => {
 const handleDelete = (id) => {
     deleteModal.classList.remove('hidden');
     let users = JSON.parse(sessionStorage.getItem('users'));
-    const user = users.find(u=>u.id = id);
+    const user = users.find(u=>u.id == id);
     document.querySelector('.deleteTitle').innerHTML = user.username;
     document.querySelector('#deleteUser').onclick = () => {
         users = users.filter(user => user.id !== id)
