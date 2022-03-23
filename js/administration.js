@@ -3,10 +3,12 @@ const divTable = document.querySelector('#table')
 const validEdit = document.getElementById('validEdit')
 
 const editModal = document.querySelector('#editModal')
+const deleteModal = document.querySelector('#deleteModal')
 
-const editedFirst = document.querySelector('#editedFirst')
-const editedLast = document.querySelector('#editedLast')
-const editedUsername = document.querySelector('#editedUsername')
+
+let editedFirst = document.querySelector('#editedFirst')
+let editedLast = document.querySelector('#editedLast')
+let editedUsername = document.querySelector('#editedUsername')
 
 
 const fetchUsers = () => {
@@ -79,18 +81,28 @@ const handleEdit = (id) => {
     })
 }
 const handleDelete = (id) => {
+    deleteModal.classList.remove('hidden');
     let users = JSON.parse(sessionStorage.getItem('users'));
-    users = users.filter(user => user.id !== id)
-    sessionStorage.setItem('users', JSON.stringify(users));
-    fetchUsers()
+    const user = users.find(u=>u.id = id);
+    document.querySelector('.deleteTitle').innerHTML = user.username;
+    document.querySelector('#deleteUser').onclick = () => {
+        users = users.filter(user => user.id !== id)
+        sessionStorage.setItem('users', JSON.stringify(users));
+        fetchUsers()
+        deleteModal.classList.add('hidden');
+    }
 }
 
 window.onload = () => {
     fetchUsers();
 
-    document.querySelector('#hideEdit').addEventListener('click', () => {
-        editModal.classList.add('hidden')
-        editedFirst.value = editedLast.value = '';
-    })
+    document.querySelector('#hideEdit').onclick = () => {
+        editModal.classList.add('hidden');
+        editedFirst.value = editedLast.value = editedUsername = '';
+    }
 
+    document.querySelector('#hideDelete').onclick = () => {
+        deleteModal.classList.add('hidden');
+    }
+    
 }

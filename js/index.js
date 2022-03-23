@@ -57,3 +57,4 @@ window.addEventListener('resize', (e) => {
         searchInput.classList.add('hidden')
     }
 })
+

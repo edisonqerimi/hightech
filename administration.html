@@ -18,7 +18,7 @@
             <div class="center-modal">
                 <form id="editSection" class="form">
                     <div id="editTitle">Edit user</div>
-                    <div id="validEdit" class="valid"></div>
+                    <div id="validEdit" class="validation"></div>
                     <div class="label-input">
                         <label for="editedUsername">Username</label>
                         <input class="edit-input" id="editedUsername" type="text">
@@ -36,6 +36,18 @@
                         <button id="hideEdit" class="btn">Cancel</button>
                     </div>
                 </form>
+            </div>
+        </div>
+        <div id="deleteModal" class="modal hidden">
+            <div class="center-modal">
+                <div class="form">
+                     <h3>Are you sure you want to remove user <span class="validation deleteTitle"></span>?</h3>
+                <div class="buttons">
+                    <button id="deleteUser" class="btn btn-red">Delete user</button>
+                    <button id="hideDelete" class="btn">Cancel</button>
+                </div>
+                </div>
+               
             </div>
         </div>
         <div id="table"></div>

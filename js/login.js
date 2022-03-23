@@ -17,7 +17,10 @@ window.onload = () => {
         if (user != null) {
             if (user.password === passwordInput.value) {
                 sessionStorage.setItem('actualUser', JSON.stringify(user));
-                window.location = returnPath;
+                if (returnPath != null && returnPath != '/login.html' && returnPath != '/register.html')
+                    window.location = returnPath;
+                else
+                    window.location = './index.html';
             }
             else {
                 validation.innerHTML = 'Wrong credentials!';
