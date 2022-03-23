@@ -20,13 +20,16 @@ window.onload = () => {
     </div>
     <div class="main-details">
         <div class="main-first">
-            <div class="product-title">${product.brand} ${product.model}</div>
+            <div class="product-title">${product.brand} ${product.model} | <span class='stock'>Stock: ${product.amount>0?'YES':'NO'} <span></div>
             <div class="product-price">
                 ${product.discount.isDiscount ?
                 `<div class="discount-price">${product.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''
             }   
                     <div class='${product.discount.isDiscount ? "discount" : ''}'>${product.price.toFixed(2)} &euro;</div>  
             </div>
+        </div>
+        <div class='description'>
+            ${product.description}
         </div>
         <div class="product-buttons">
             <a href='/shop.html' class="btn btn-red">Back to shop</a>
@@ -64,6 +67,16 @@ window.onload = () => {
         ${detail('Screen size', details.screenSize)}
         ${detail('Display', details.display)}
         ${detail('Storage', details.storage)}
+        `
+    }
+    if (product.category == 'accessory') {
+        moreBody.innerHTML = `
+        ${detail('Battery life', details.batteryLife)}
+        ${detail('Bluetooth', details.bluetooth)}
+        ${detail('Battery Charge Method', details.batteryCharge)}
+        ${detail('Adaptive Sound Control', details.soundControl)}
+        ${detail('Playback Controller', details.playbackController)}
+        ${detail('Battery level indication (icon with %)', details.batteryIndication)}
         `
     }
 }

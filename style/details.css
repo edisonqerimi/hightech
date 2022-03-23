@@ -87,6 +87,10 @@
     gap: 15px;
 }
 
+.stock{
+    font-size: 1.2rem;
+}
+
 @media screen and (max-width:768px) {
     .details{
         gap: 5px;

@@ -1,4 +1,16 @@
 
+
+// const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+
+if(currentUser!=null){
+    if(currentUser.role!=='admin'){
+        window.location = './index.html'
+    }
+}
+else{
+    window.location = './index.html'
+}
+
 const divTable = document.querySelector('#table')
 const validEdit = document.getElementById('validEdit')
 

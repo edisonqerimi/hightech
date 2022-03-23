@@ -16,7 +16,7 @@ window.onload = () => {
 
         if (user != null) {
             if (user.password === passwordInput.value) {
-                sessionStorage.setItem('actualUser', JSON.stringify(user));
+                sessionStorage.setItem('currentUser', JSON.stringify(user));
                 if (returnPath != null && returnPath != '/login.html' && returnPath != '/register.html')
                     window.location = returnPath;
                 else

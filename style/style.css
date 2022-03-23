@@ -46,7 +46,7 @@ a{
 .banner{
     cursor: default;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     padding: 9px;
     display: flex;
     align-items: center;
@@ -199,14 +199,6 @@ a{
     position: relative;
 }
 
-.account-container{
-    height: 135px;
-    position: absolute;
-    top: 30px;
-    left: -65px;
-    display: flex;
-    align-items: flex-end;
-}
 
 .account-icon{
     color: #050401;
@@ -226,6 +218,9 @@ a{
 }
 
 .account-navbar{
+    position: absolute;
+    top: 35px;
+    right: -65px;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
@@ -244,7 +239,7 @@ a{
       }
   }
 
-.loggedin-nav,.loggedout-nav{
+.account-items-nav{
     gap: 9px;
     display: flex;
     flex-direction: column;
@@ -353,24 +348,12 @@ a{
      align-items: center;
 }
 
-.account-items a{
-    color: #050401;
-    padding:10px;
-    transition: all 0.15s ease-in-out;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-.account-items a:hover{
-    background: #1e1d1a;
-    color: #FFFAFF;
-    padding:10px;
-}
 
-
-.login-register,.settings-logout{
+.account-items-side{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
     margin-bottom: 10px;
 }
 

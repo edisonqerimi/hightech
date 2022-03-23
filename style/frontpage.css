@@ -64,6 +64,10 @@
 .img-holder2{
     background: url('../img/hp.jpg');
 }
+.img-holder3{
+    background-color: #fffaff;
+    background-image: url('../img/sony.png');
+}
 
 .photo2{
     grid-area: second;
@@ -89,7 +93,6 @@
     transform: scale(1.2);
 }
 .photo3{
-    background: #307692;
     grid-area: third;
 }
 

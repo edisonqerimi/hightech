@@ -7,6 +7,7 @@ export const users = [
         'username':'eddqerimi',
         'email':'edisonqerimii1@gmail.com',
         'password':'password',
+        'role':'admin'
     },
     {
         'id':2,
@@ -15,6 +16,7 @@ export const users = [
         'username':'willsmith',
         'email':'willsmith@gmail.com',
         'password':'willsmith',
+        'role':'',
     },
     {
         'id':3,
@@ -23,5 +25,6 @@ export const users = [
         'username':'dwashington',
         'email':'denzelwashington@gmail.com',
         'password':'denzel123',
+        'role':'',
     }
 ]

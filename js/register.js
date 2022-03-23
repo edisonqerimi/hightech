@@ -62,7 +62,7 @@ window.onload = () => {
                 email:email.value,
                 password:password.value,
             };
-            sessionStorage.setItem('actualUser', JSON.stringify(user));
+            sessionStorage.setItem('currentUser', JSON.stringify(user));
             users.push(user);
             console.log(users)
             sessionStorage.setItem('users',JSON.stringify(users));

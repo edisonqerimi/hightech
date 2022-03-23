@@ -1,5 +1,6 @@
 const returnUrl = window.location.pathname;
 
+
 const profileIcon = `
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path class="outside" fill-rule="evenodd" clip-rule="evenodd"
@@ -85,6 +86,11 @@ const logoutIcon = `
         <path d="M13.8418 17.385L15.262 15.9768L11.3428 12.0242L20.4857 12.0242C21.038 12.0242 21.4857 11.5765 21.4857 11.0242C21.4857 10.4719 21.038 10.0242 20.4857 10.0242L11.3236 10.0242L15.304 6.0774L13.8958 4.6572L7.5049 10.9941L13.8418 17.385Z" fill="currentColor" />
     </svg>
 `
+const adminIcon = `
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2V4H20V12H22C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM18 12H16V8H12V6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12Z" fill="currentColor" />
+    </svg>
+`
 
 document.getElementById('nav').innerHTML = `
         <div class="hamburger show-sidebar">${hamburgerIcon}</div>
@@ -119,34 +125,18 @@ document.getElementById('nav').innerHTML = `
 
             <div class="profile icon-item">
                 ${profileIcon}
-            <div class='account-container hidden'>
-            <div class='account-navbar'>
-                <div class="loggedout-nav">
-                  <div>
+            <div id='account' class='account-navbar hidden'>
+                <div id="account-items-nav" class="account-items-nav">
                     <a class='account-icon login' href="./login.html?returnUrl=${returnUrl}">
                         ${loginIcon}
                         <div>Log In</div>
                     </a>
-                  </div>
-                  <div>
-                        <a class='account-icon register' href="./register.html">
-                            ${registerIcon}
-                            <div>Register</div>
-                        </a>
-                 </div>
-                </div>
-                <div class="loggedin-nav hidden">
-                    <a href="#">
-                        ${profileIcon}
-                        <div>Account</div>
-                    </a>
-                    <a href="#">
-                        ${logoutIcon}
-                        <div>Log Out</div>
+                    <a class='account-icon register' href="./register.html">
+                        ${registerIcon}
+                        <div>Register</div>
                     </a>
                 </div>
             </div>
-        </div>
             </div>
             <a href="#" class="cart icon-item">
                 ${cartIcon}
@@ -167,25 +157,15 @@ document.getElementById('sidebar').innerHTML = `
     <form class='side-form' action="/search.html">
         <input class='search-input side-search' name='search' placeholder='Search products'/>
     </form>
-    <div class="account-items">
-        <div class="login-register">
-            <a href="./login.html?returnUrl=${returnUrl}">
+    <div id='account-side' class="account-items">
+        <div id='account-items-side' class="account-items-side">
+            <a class='account-icon' href="./login.html?returnUrl=${returnUrl}">
                 ${loginIcon}
                 <div>Log In</div>
             </a>
-            <a href="./register.html">
+            <a class='account-icon' href="./register.html">
                 ${registerIcon}
                 <div>Register</div>
-            </a>
-        </div>
-        <div class="settings-logout">
-            <a href="#">
-                ${profileIcon}
-                <div>Account</div>
-            </a>
-            <a href="#">
-                ${logoutIcon}
-                <div>Log Out</div>
             </a>
         </div>
     </div>
