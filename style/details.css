@@ -8,7 +8,7 @@
 }
 
 .d-photo{
-    height: 40vh;
+    min-height: 40vh;
     grid-area: photo;
     background-size: contain;
     background-repeat: no-repeat;
@@ -62,12 +62,19 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 4px;
+    white-space: nowrap;
 }
+
 
 .main-details{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.description{
+    
+    padding: 10px 0;
 }
 
 .main-first{
@@ -88,7 +95,8 @@
 }
 
 .stock{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
 }
 
 @media screen and (max-width:768px) {
@@ -100,6 +108,6 @@
                              'more';
     }
     .d-photo,.main-details,.more-details{
-        height: 50vh;
+        min-height: 50vh;
     }
 }
