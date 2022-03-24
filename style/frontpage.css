@@ -37,19 +37,32 @@
 
 
 
-#start{
-   background: #98959B;
+.shop-button{
     font-size: larger;
-    font-weight: 600;
     border-radius: 2px;
     text-transform: uppercase;
-    display: flex;
+    padding: 10px 30px;
+    display: none;
+}
+
+#start{
     padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(165, 165, 165, 0.2);
+    color: white;
+    border-radius: 2px;
     transition: all 0.15s ease-in-out;
 }
 
 #start:hover{
-    background: #E6E1E6;
+    background-color: rgba(165, 165, 165, 0.4);
+}
+
+.start-svg{
+    width: 30px;
+    height: 30px;
 }
 
 .photo1{
@@ -131,6 +144,12 @@
     }
     .photo{
         height: 50vh;
+    }
+    .shop-button{
+        display: initial;
+    }
+    #start{
+        display: none;
     }
     .article1-title{
         font-size: 1.5rem;

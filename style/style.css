@@ -464,6 +464,18 @@ a{
 
 }
 
+.added-cart{
+    position: fixed;
+    background: green;
+    color: #fffaff;;
+    padding:10px 50px;
+    bottom: 10%;
+    right: 10%;
+    border-radius: 3px;
+    animation: opacity 0.3s ease-in-out;
+}
+
+
 @media screen and (max-width:768px) {
     #nav{
         padding: 8px 20px;

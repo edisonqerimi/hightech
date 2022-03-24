@@ -171,8 +171,12 @@ const products = [
 
 const bindProducts = (products, element) => {
     if (products.length > 0) {
+        const addedToCart = document.createElement('div');
+        addedToCart.classList.add('added-cart','hidden');
+        addedToCart.innerHTML = 'Added to cart'
+        element.appendChild(addedToCart);
         products.map(p => {
-            var product = document.createElement('div');
+            const product = document.createElement('div');
             product.classList.add('product')
             product.innerHTML = `
             <div style="background-image: url('${p.img}');" class="product-image"></div>

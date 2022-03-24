@@ -33,7 +33,7 @@ const fetchCarts = () => {
         <td>${user.username}</td>
         <td>${cart.productId}</td>
         <td>${product.brand} ${product.model}</td>
-        <td><button onclick="handleDelete(${cart.productId})" class="btn">delete</button></td>
+        <td><button onclick="handleDelete(${cart.id})" class="btn">delete</button></td>
       `
         }
         );
@@ -42,26 +42,14 @@ const fetchCarts = () => {
         divTable.innerHTML = '<div class="valid">No products in your cart found!</div>';
     }
 }
-const deleteModal = document.querySelector('#deleteModal')
+
 const handleDelete = (id) => {
     let carts = JSON.parse(sessionStorage.getItem('carts'));
-    let products = JSON.parse(sessionStorage.getItem('products'));
-    deleteModal.classList.remove('hidden');
-    const product = products.find(p => p.id == id);
-    document.querySelector('.deleteTitle').innerHTML = `${product.brand} ${product.model}`;
-    validDelete.innerHTML = ''
-    document.querySelector('#deleteUser').onclick = () => {
-        carts = carts.filter(cart => cart.productId !== id)
-        sessionStorage.setItem('carts', JSON.stringify(carts));
-        fetchCarts()
-        deleteModal.classList.add('hidden');
-    }
+    carts = carts.filter(cart => cart.id !== id)
+    sessionStorage.setItem('carts', JSON.stringify(carts));
+    fetchCarts()
 }
 
 window.onload = () => {
     fetchCarts();
-    document.querySelector('#hideDelete').onclick = () => {
-        deleteModal.classList.add('hidden');
-    }
-
 }

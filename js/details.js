@@ -15,6 +15,7 @@ window.onload = () => {
     const product = products.find(p => p.id == id);
 
     document.getElementById('details').innerHTML = `
+    <div class='added-cart hidden'></div>
     <div style="background-image:url('${product.img}')" class="d-photo">
         
     </div>
@@ -33,7 +34,7 @@ window.onload = () => {
         </div>
         <div class="product-buttons">
             <a href='/shop.html' class="btn btn-red">Back to shop</a>
-            <div class="btn btn-info">Add to cart</div>
+            <div onclick='addToCart(${product.id})' class="btn btn-info">Add to cart</div>
         </div>
         
     </div>

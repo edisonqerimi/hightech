@@ -262,6 +262,8 @@
     }
 }
 
+
+
 @media screen and (min-width:561px) {
     .product:hover .product-image{
         background-size: 105%;
