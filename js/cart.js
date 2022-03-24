@@ -44,6 +44,7 @@ const fetchCarts = () => {
 }
 const deleteModal = document.querySelector('#deleteModal')
 const handleDelete = (id) => {
+    let carts = JSON.parse(sessionStorage.getItem('carts'));
     let products = JSON.parse(sessionStorage.getItem('products'));
     deleteModal.classList.remove('hidden');
     const product = products.find(p => p.id == id);
