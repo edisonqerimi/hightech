@@ -6,7 +6,7 @@ const products = [
         'model': 'iPhone 13 Pro Max',
         'category': 'smartphone',
         'price': 1199.50,
-        'description':`The biggest Pro camera system upgrade ever.
+        'description': `The biggest Pro camera system upgrade ever.
          Super Retina XDR display with ProMotion for a faster, more responsive feel.
          Lightning-fast A15 Bionic chip. Superfast 5G.1 Durable design and the best battery life ever in an iPhone.`,
         'color': 'blue',
@@ -37,7 +37,7 @@ const products = [
         'category': 'smartphone',
         'price': 1149.50,
         'color': 'green',
-        'description':`The Note that isn't a Note, yet it may very well end up being the last Note - Samsung's Galaxy S22 Ultra has some big shoes to fill.
+        'description': `The Note that isn't a Note, yet it may very well end up being the last Note - Samsung's Galaxy S22 Ultra has some big shoes to fill.
          Attempting to appeal to both productivity-focused stylus lovers and photography enthusiasts,
          the latest Ultra will either be the ultimate phone, period, or fall short for either group in some way.`,
         'discount': {
@@ -66,7 +66,7 @@ const products = [
         'model': 'Pixel 6 Pro',
         'category': 'smartphone',
         'price': 999.50,
-        'description':`The Google Pixel 6 Pro is leagues ahead of its predecessors in hardware,
+        'description': `The Google Pixel 6 Pro is leagues ahead of its predecessors in hardware,
          software, and design with a brand-new set of camera sensors, a new and unique design,
          and plenty of new software features that leverage Google's custom-made Tensor chip.`,
         'color': 'black',
@@ -97,7 +97,7 @@ const products = [
         'category': 'laptop',
         'price': 1099.99,
         'color': 'silver',
-        'description':`Unleash your creativity with the HP ENVY 17 Laptop that gives you the performance,
+        'description': `Unleash your creativity with the HP ENVY 17 Laptop that gives you the performance,
          features and freedom to create the way you want. Powered by Intel® Core™ processor
         , brings your ideas to life in stunning colors that match your imagination. `,
         'discount': {
@@ -169,24 +169,24 @@ const products = [
     }
 ];
 
-const bindProducts = (products,element) => {
+const bindProducts = (products, element) => {
     if (products.length > 0) {
-        products.map(s => {
+        products.map(p => {
             var product = document.createElement('div');
             product.classList.add('product')
             product.innerHTML = `
-            <div style="background-image: url('${s.img}');" class="product-image"></div>
+            <div style="background-image: url('${p.img}');" class="product-image"></div>
             <div class="product-body">
-                <div class="product-title">${s.brand} ${s.model}</div>
+                <div class="product-title">${p.brand} ${p.model}</div>
                 <div class="product-price">
-                ${s.discount.isDiscount ?
-                    `<div class="discount-price">${s.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''
+                ${p.discount.isDiscount ?
+                    `<div class="discount-price">${p.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''
                 }   
-                <div class='${s.discount.isDiscount ? "discount" : ''}'>${s.price.toFixed(2)} &euro;</div>
+                <div class='${p.discount.isDiscount ? "discount" : ''}'>${p.price.toFixed(2)} &euro;</div>
                 </div>
                 <div class="product-buttons">
-                    <a href='/details.html?product-id=${s.id}' class="btn product-btn">More info</a>
-                    <div class="btn btn-info product-btn">Add to cart</div>
+                    <a href='/details.html?product-id=${p.id}' class="btn product-btn">More info</a>
+                    <div onclick='addToCart(${p.id})' class="btn btn-info product-btn">Add to cart</div>
                 </div>
                 `;
             element.appendChild(product);
@@ -196,5 +196,7 @@ const bindProducts = (products,element) => {
         element.innerHTML = '<div>No products found</div>';
     }
 }
-export { products,bindProducts }
+
+
+export { products, bindProducts }
 

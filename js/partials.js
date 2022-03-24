@@ -138,7 +138,7 @@ document.getElementById('nav').innerHTML = `
                 </div>
             </div>
             </div>
-            <a href="#" class="cart icon-item">
+            <a href="./cart.html" class="cart icon-item">
                 ${cartIcon}
             </a>
             </div>

@@ -7,11 +7,6 @@ const filterValue = params.get('filter-value');
 const productsElement = document.querySelector('#products');
 
 
-
-
-
-
-
 const bindFiltering = (products, filterNames) => {
 
     filterNames.map(item => {

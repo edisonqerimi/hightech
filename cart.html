@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGH Tech - Cart</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/admin.css">
+</head>
+<body>
+    <nav id="nav"></nav>
+
+    <div id="sidebar"></div>
+
+    <div class="banner hidden"></div>
+    <div id="deleteModal" class="modal hidden">
+        <div class="center-modal">
+            <div class="form">
+                <h3 style="margin: 0;">Are you sure you want to remove <span class="validation deleteTitle"></span> from cart?</h3>
+                <div class="validation" id="validDelete"></div>
+                <div class="buttons">
+                    <button id="deleteUser" class="btn btn-red">Remove</button>
+                    <button id="hideDelete" class="btn">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">  
+        <div id="carts" class="container-width">
+            <div id="table">
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer"></div>
+    <style>
+        #carts{
+            margin-top: 20px;
+        }
+    </style>
+    <script src="./js/partials.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="module" src="./js/initProducts.js"></script>
+    <script type="module" src="./js/initUsers.js"></script>
+    <script type="module" src="./js/initCarts.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

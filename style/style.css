@@ -455,6 +455,15 @@ a{
     to {left: 0;}
   }
 
+.center{
+    width: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
 @media screen and (max-width:768px) {
     #nav{
         padding: 8px 20px;
