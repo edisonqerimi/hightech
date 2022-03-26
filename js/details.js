@@ -21,7 +21,8 @@ window.onload = () => {
     </div>
     <div class="main-details">
         <div class="main-first">
-            <div class="product-title">${product.brand} ${product.model} | <span class='stock'>Stock: ${product.amount>0?'YES':'NO'} <span></div>
+            <div class="product-title">${product.brand} ${product.model}</div>
+            <div class="product-amount">Pieces available: ${product.amount}</div>
             <div class="product-price">
                 ${product.discount.isDiscount ?
                 `<div class="discount-price">${product.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''

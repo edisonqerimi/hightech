@@ -62,7 +62,6 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 4px;
-    white-space: nowrap;
 }
 
 
@@ -94,9 +93,9 @@
     gap: 15px;
 }
 
-.stock{
-    font-size: 1.1rem;
-    white-space: nowrap;
+.product-amount{
+    font-size: 1.08rem;
+    margin-bottom: 12px;
 }
 
 @media screen and (max-width:768px) {
