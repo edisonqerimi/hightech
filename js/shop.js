@@ -54,25 +54,25 @@ const bindFiltering = (products, filterNames) => {
 window.onload = () => {
 
     let products = JSON.parse(sessionStorage.getItem('products'));
-    const path = location.pathname.split('.html')[0].split('/')[1];
+    const path = location.pathname.split('.html')[0];
     switch (path) {
-        case 'smartphone':
+        case '/smartphone' || '/hightech/smartphone':
             products = products.filter(p => p.category === 'smartphone');
             break;
-        case 'desktops':
+        case '/desktops' || '/hightech/desktops':
             products = products.filter(p => p.category === 'desktop');
             break;
-        case 'accessories':
+        case '/accessories' || '/hightech/accessories':
             products = products.filter(p => p.category === 'accessory');
             break;
-        case 'laptop':
+        case '/laptop' || '/hightech/laptop':
             products = products.filter(p => p.category === 'laptop');
             break;
         default:
             break;
     }
     bindFiltering(products, ['brand', 'color']);
-    bindProducts(products.filter((p) => p[filterBy] == filterValue),productsElement);
+    bindProducts(products.filter((p) => p[filterBy] == filterValue), productsElement);
 
     const filterHeader = document.querySelectorAll('.filter-header');
     const pluses = document.querySelectorAll('.plus');
@@ -107,7 +107,7 @@ window.onload = () => {
         outputPrice.innerHTML = `${Math.round(e.target.value)} &euro;`;
         const newProducts = products.filter(p => p.discount.isDiscount ? p.discount.priceDiscount <= max : p.price <= max);
         productsElement.innerHTML = '';
-        bindProducts(newProducts,productsElement);
+        bindProducts(newProducts, productsElement);
     }
 
 }
