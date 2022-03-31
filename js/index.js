@@ -75,7 +75,7 @@ if (currentUser != null) {
                         ${profileIcon}
                         <div>Account</div>
                     </a>
-                    <a class='account-icon' href="./administration.html">
+                    <a class='account-icon' href="#">
                         ${adminIcon}
                         <div>Admin</div>
                     </a>

@@ -34,7 +34,7 @@ window.onload = () => {
             ${product.description}
         </div>
         <div class="product-buttons">
-            <a href='/shop.html' class="btn btn-red">Back to shop</a>
+            <a href='./shop.html' class="btn btn-red">Back to shop</a>
             <div onclick='addToCart(${product.id})' class="btn btn-info">Add to cart</div>
         </div>
         

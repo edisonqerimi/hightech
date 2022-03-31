@@ -106,7 +106,7 @@ document.getElementById('nav').innerHTML = `
                     <div>Shop</div>
                     <!--${bagIcon}-->
                 </a>
-                <a href="./shop.html" class="nav-item">
+                <a href="#" class="nav-item">
                     <div>Support</div>
                     <!--${supportIcon}-->
                 </a>
@@ -189,7 +189,7 @@ document.getElementById('sidebar').innerHTML = `
         <a href="./accessories.html" class="item-3 side-row">
             <div class="side-item">Accessories</div>
         </a>
-        <a href="./support.html" class="item-3 side-row">
+        <a href="#" class="item-3 side-row">
             <div class="side-item">Support</div>
         </a>
     </div>
