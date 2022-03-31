@@ -56,16 +56,20 @@ window.onload = () => {
     let products = JSON.parse(sessionStorage.getItem('products'));
     const path = location.pathname.split('.html')[0];
     switch (path) {
-        case '/smartphone' || '/hightech/smartphone':
+        case '/hightech/smartphone':
+        case '/smartphone':
             products = products.filter(p => p.category === 'smartphone');
             break;
-        case '/desktops' || '/hightech/desktops':
+        case '/hightech/desktops':
+        case '/desktops':
             products = products.filter(p => p.category === 'desktop');
             break;
-        case '/accessories' || '/hightech/accessories':
+        case '/hightech/accessories':
+        case '/accessories':
             products = products.filter(p => p.category === 'accessory');
             break;
-        case '/laptop' || '/hightech/laptop':
+        case '/hightech/laptop':
+        case '/laptop':
             products = products.filter(p => p.category === 'laptop');
             break;
         default:
