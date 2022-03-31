@@ -189,7 +189,7 @@ const bindProducts = (products, element) => {
                 <div class='${p.discount.isDiscount ? "discount" : ''}'>${p.price.toFixed(2)} &euro;</div>
                 </div>
                 <div class="product-buttons">
-                    <a href='/details.html?product-id=${p.id}' class="btn product-btn">More info</a>
+                    <a href='./details.html?product-id=${p.id}' class="btn product-btn">More info</a>
                     <div onclick='addToCart(${p.id})' class="btn btn-info product-btn">Add to cart</div>
                 </div>
                 `;
