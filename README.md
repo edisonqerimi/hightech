@@ -1,1 +1,1 @@
-# edisonqerimi.github.io/hightech
+# edisonqerimi.github.io
