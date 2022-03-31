@@ -115,7 +115,7 @@ document.getElementById('nav').innerHTML = `
 
         <div class="nav-end">
 
-            <form class='search-form' action="/search.html">
+            <form class='search-form' action="./search.html">
                 <input class='search-input hidden' name='search' placeholder='Search products'/>
             </form>
     
@@ -154,7 +154,7 @@ document.getElementById('sidebar').innerHTML = `
             <div>HIGH TECH</div>
         </a>
     </div>
-    <form class='side-form search-form' action="/search.html">
+    <form class='side-form search-form' action="./search.html">
         <input class='search-input side-search' name='search' placeholder='Search products'/>
     </form>
     <div id='account-side' class="account-items">
