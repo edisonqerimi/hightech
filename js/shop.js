@@ -54,18 +54,18 @@ const bindFiltering = (products, filterNames) => {
 window.onload = () => {
 
     let products = JSON.parse(sessionStorage.getItem('products'));
-    const path = location.pathname.split('.html')[0];
+    const path = location.pathname.split('.html')[0].split('/')[1];
     switch (path) {
-        case '/smartphone':
+        case 'smartphone':
             products = products.filter(p => p.category === 'smartphone');
             break;
-        case '/desktops':
+        case 'desktops':
             products = products.filter(p => p.category === 'desktop');
             break;
-        case '/accessories':
+        case 'accessories':
             products = products.filter(p => p.category === 'accessory');
             break;
-        case '/laptop':
+        case 'laptop':
             products = products.filter(p => p.category === 'laptop');
             break;
         default:

@@ -1,7 +1,11 @@
 
 const params = new window.URLSearchParams(window.location.search);
 
-const returnPath = params.get('returnUrl');
+let returnPath = params.get('returnUrl');
+
+if (returnPath != null) {
+    returnPath = returnPath.split('.html')[0].split('/')[1]
+}
 
 const loginForm = document.querySelector('.login-form');
 const usernameInput = document.querySelector('#username');
@@ -17,7 +21,7 @@ window.onload = () => {
         if (user != null) {
             if (user.password === passwordInput.value) {
                 sessionStorage.setItem('currentUser', JSON.stringify(user));
-                if (returnPath != null && returnPath != '/login.html' && returnPath != '/register.html')
+                if (returnPath != null && returnPath != 'login' && returnPath != 'register')
                     window.location = returnPath;
                 else
                     window.location = './index.html';
