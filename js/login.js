@@ -4,7 +4,7 @@ const params = new window.URLSearchParams(window.location.search);
 let returnPath = params.get('returnUrl');
 
 if (returnPath != null) {
-    returnPath = returnPath.split('.html')[0];
+    returnPath = returnPath.split('.html')[0].split('/').pop();;
 }
 
 const loginForm = document.querySelector('.login-form');
@@ -21,8 +21,8 @@ window.onload = () => {
         if (user != null) {
             if (user.password === passwordInput.value) {
                 sessionStorage.setItem('currentUser', JSON.stringify(user));
-                if (returnPath != null && returnPath != '/hightech/login' && returnPath != '/hightech/register'&& returnPath != '/login' && returnPath != '/register')
-                    window.location = returnPath;
+                if (returnPath != null && returnPath != '' && returnPath != 'login' && returnPath != 'register')
+                    window.location = returnPath + '.html';
                 else
                     window.location = './index.html';
             }
