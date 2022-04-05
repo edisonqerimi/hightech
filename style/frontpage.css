@@ -10,15 +10,12 @@
 .main{
     height: 90vh;
     grid-area: main;
+    color: #fffaff;
     background-color: #050401;
-    /* background: linear-gradient(to bottom,rgba(34, 34, 34, 0.74),#222),url('../img/main2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 64px;
+    gap: 58px;
     overflow: hidden;
 }
 
@@ -42,15 +39,15 @@
 
 .main-header{
     font-size: 2rem;
-    color: #fffaff;
     text-transform: uppercase;
     margin-bottom: 24px;
+    letter-spacing: 2px;
 }
 
 .main-desc{
-    color: #fffaff;
     margin-bottom: 48px;
     line-height: 1.4;
+    letter-spacing: 1px;
 }
 
 
