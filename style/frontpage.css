@@ -8,41 +8,62 @@
 }
 
 .main{
-    height: 100vh;
+    height: 90vh;
     grid-area: main;
-    
-    background: linear-gradient(to bottom,rgba(34, 34, 34, 0.74),#222),url('../img/main2.jpg');
+    background-color: #050401;
+    /* background: linear-gradient(to bottom,rgba(34, 34, 34, 0.74),#222),url('../img/main2.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 64px;
+    overflow: hidden;
 }
 
 .main-items{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 16px 56px;
+}
+
+.main-image{
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 90px;
-    width: 70%;
+    padding: 16px 24px;
 }
 
-.main-text{
+.main-image img{
+    width: 100%;
+}
+
+.main-header{
     font-size: 2rem;
     color: #fffaff;
-    padding: 10px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.main-desc{
+    color: #fffaff;
+    margin-bottom: 48px;
+    line-height: 1.4;
 }
 
 
-
-.shop-button{
+.shop-button,.login-button{
     font-size: larger;
     border-radius: 2px;
     text-transform: uppercase;
     padding: 10px 30px;
-    display: none;
+}
+
+.login-button{
+    padding: 8px 30px;
+    border: 2px solid #fffaff;
 }
 
 #start{
@@ -54,6 +75,12 @@
     color: white;
     border-radius: 2px;
     transition: all 0.15s ease-in-out;
+}
+
+.main-buttons{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 #start:hover{
@@ -145,15 +172,21 @@
     .photo{
         height: 50vh;
     }
-    .shop-button{
+    /* .shop-button{
         display: initial;
     }
     #start{
         display: none;
-    }
-    .article1-title{
+    } */
+    /* .article1-title{
         font-size: 1.5rem;
         margin-bottom: 0;
+    } */
+    .main-image{
+        display: none;
+    }
+    .main{
+        flex-direction: column;
     }
     .article1-cmimi{
         font-size: 1.05rem;
