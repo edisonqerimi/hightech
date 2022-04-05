@@ -179,7 +179,9 @@ const bindProducts = (products, element) => {
             const product = document.createElement('div');
             product.classList.add('product')
             product.innerHTML = `
-            <div style="background-image: url('${p.img}');" class="product-image"></div>
+            <div class="product-image">
+            <img src='${p.img}' />
+            </div>
             <div class="product-body">
                 <div class="product-title">${p.brand} ${p.model}</div>
                 <div class="product-price">
