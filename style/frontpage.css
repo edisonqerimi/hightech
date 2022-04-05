@@ -66,30 +66,11 @@
     border: 2px solid #fffaff;
 }
 
-#start{
-    padding: 5px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(165, 165, 165, 0.2);
-    color: white;
-    border-radius: 2px;
-    transition: all 0.15s ease-in-out;
-}
 
 .main-buttons{
     display: flex;
     align-items: center;
     gap: 12px;
-}
-
-#start:hover{
-    background-color: rgba(165, 165, 165, 0.4);
-}
-
-.start-svg{
-    width: 30px;
-    height: 30px;
 }
 
 .photo1{
@@ -172,16 +153,6 @@
     .photo{
         height: 50vh;
     }
-    /* .shop-button{
-        display: initial;
-    }
-    #start{
-        display: none;
-    } */
-    /* .article1-title{
-        font-size: 1.5rem;
-        margin-bottom: 0;
-    } */
     .main-image{
         display: none;
     }
