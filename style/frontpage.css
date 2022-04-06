@@ -1,17 +1,15 @@
-
-
-.grid{
+.grid {
     display: grid;
     grid-template-areas: 'main main main'
-                         'first first second'
-                         'first first third';
+        'first first second'
+        'first first third';
 }
 
-.main{
+.main {
     height: 90vh;
     grid-area: main;
-    color: #fffaff;
-    background-color: #050401;
+    color: #050401;
+    background-color: #e6e1e6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,85 +17,84 @@
     overflow: hidden;
 }
 
-.main-items{
+.main-items {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 16px 56px;
 }
 
-.main-image{
+.main-image {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 16px 24px;
 }
 
-.main-image img{
+.main-image img {
     width: 100%;
 }
 
-.main-header{
+.main-header {
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 24px;
     letter-spacing: 2px;
 }
 
-.main-desc{
+.main-desc {
     margin-bottom: 48px;
     line-height: 1.4;
     letter-spacing: 1px;
 }
 
 
-.shop-button,.login-button{
+.shop-button,
+.login-button {
     font-size: larger;
     border-radius: 2px;
     text-transform: uppercase;
     padding: 10px 30px;
 }
 
-.login-button{
-    padding: 8px 30px;
-    border: 2px solid #fffaff;
-}
 
-
-.main-buttons{
+.main-buttons {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.photo1{
+.photo1 {
     height: 100vh;
     grid-area: first;
 }
 
-.img-holder1{
+.img-holder1 {
     background: url('../img/iphone.png');
 }
 
-.img-holder2{
+.img-holder2 {
     background: url('../img/hp.jpg');
 }
-.img-holder3{
+
+.img-holder3 {
     background-color: #fffaff;
     background-image: url('../img/sony.png');
 }
 
-.photo2{
+.photo2 {
     grid-area: second;
 }
-.photo{
+
+.photo {
     position: relative;
     overflow: hidden;
     color: #050401;
     display: flex;
     align-items: flex-end;
 }
-.img-holder{
+
+.img-holder {
     z-index: -1;
     position: absolute;
     width: 100%;
@@ -107,62 +104,83 @@
     background-size: cover;
     transition: all 0.4s ease-in-out;
 }
-.photo:hover .img-holder{
+
+.photo:hover .img-holder {
     transform: scale(1.05);
 }
-.photo3{
+
+.photo3 {
     grid-area: third;
 }
 
-.article1-title{
+.article1-title {
     font-size: 2.5rem;
     margin-bottom: 15px;
 }
 
 
-.article-title{
+.article-title {
     font-size: 1.5rem;
 }
 
-.cmimi{
-   font-size: 1.05rem;
+.cmimi {
+    font-size: 1.05rem;
 }
 
-.article1-cmimi{
+.article1-cmimi {
     font-size: 1.3rem;
 }
 
-.article{
+.article {
     background: #fffaffb6;
     width: 100%;
     text-align: center;
     padding: 10px;
 }
 
-.article1{
+.article1 {
     padding: 40px;
 }
 
 @media screen and (max-width:768px) {
-    .grid{
+    .grid {
         grid-template-areas: 'main' 'first' 'second' 'third';
     }
-    .photo{
+
+    .photo {
         height: 50vh;
     }
-    .main-image{
+
+    .main-image {
         display: none;
     }
-    .main{
+
+    .main {
         flex-direction: column;
+        background: linear-gradient(to bottom,#fffaff, rgba(255, 255, 255, 0.7)), url('../img/main2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
-    .article1-cmimi{
+
+    .article1-cmimi {
         font-size: 1.05rem;
     }
-    .article1{
+
+    .article1-title{
+        font-size: 1.5rem;
+    }
+
+    .article1 {
         padding: 10px;
     }
-    .main-text{
+
+    .login-button {
+        padding: 10px 30px;
+        border: 0;
+    }
+
+    .main-text {
         font-size: 1.3rem;
         color: white;
         padding: 10px;
