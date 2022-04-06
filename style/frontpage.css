@@ -38,14 +38,17 @@
 .main-header {
     font-size: 2.25rem;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     letter-spacing: 1px;
+    color: #14323E;
 }
 
 .main-desc {
-    margin-bottom: 48px;
+    margin-bottom: 42px;
     line-height: 1.4;
     letter-spacing: 1px;
+    font-size: 1.05rem;
+    font-weight: 500;
 }
 
 
@@ -157,7 +160,7 @@
 
     .main {
         flex-direction: column;
-        background: linear-gradient(to bottom,#fffaff, rgba(255, 255, 255, 0.7)), url('../img/main2.jpg');
+        background: linear-gradient(to bottom,#fffaff, rgba(255, 255, 255, 0.8)), url('../img/main2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
