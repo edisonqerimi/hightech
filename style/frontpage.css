@@ -36,10 +36,10 @@
 }
 
 .main-header {
-    font-size: 2rem;
+    font-size: 2.25rem;
     text-transform: uppercase;
     margin-bottom: 24px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .main-desc {
