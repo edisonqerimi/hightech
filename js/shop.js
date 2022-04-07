@@ -8,7 +8,6 @@ const productsElement = document.querySelector('#products');
 
 
 const bindFiltering = (products, filterNames) => {
-
     filterNames.map(item => {
         var filterElement = document.createElement('div');
         filterElement.classList.add('filter')
@@ -34,7 +33,7 @@ const bindFiltering = (products, filterNames) => {
             <input value=${item} name='filter-by' type='hidden'/>
         </form>
     `;
-        document.querySelector('.product-filter').appendChild(filterElement)
+        document.querySelector('.filter-body').appendChild(filterElement)
         const filterItems = filterElement.querySelector('.filter-items');
         products.map(prod => prod[item]).filter((value, index, self) => {
             if (self.indexOf(value) === index) {
@@ -93,6 +92,29 @@ window.onload = () => {
 
     const maxPrice = Math.max.apply(Math, prices);
     const minPrice = Math.min.apply(Math, prices);
+
+    const filterBody = document.querySelector('.filter-body');
+    const filterIcon = document.querySelector('.filter-icon');
+    window.onresize = () => {
+
+        if (window.innerWidth > 800) {
+            filterBody.classList.remove('hidden');
+            filterIcon.classList.remove('rotate')
+        }
+        else {
+            filterBody.classList.add('hidden');
+        }
+    }
+    if (window.innerWidth < 800) {
+        filterBody.classList.add('hidden');
+    }
+
+    document.querySelector('.filter-head').onclick = () => {
+        if (window.innerWidth < 800) {
+            filterBody.classList.toggle('hidden');
+        }
+        document.querySelector('.filter-icon').classList.toggle('rotate');
+    }
 
     if (products.length > 0) {
         priceInput.min = minPrice;

@@ -55,14 +55,24 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     gap: 10px;
+    padding: 20px;
     min-width: 300px;
+}
+
+.filter-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 8px;
 }
 
 .filter,.filter-price{
     color: #050401;
     border-bottom: 1px solid #beb9bf;
+}
+.filter:last-child{
+    border-bottom: 0;
 }
 .filter-header{
     display: flex;
@@ -162,12 +172,23 @@
     color: #460D01;
 }
 
-.filter-title{
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+.filter-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2px 0;
+    cursor: pointer;
 }
 
+.filter-title{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.filter-icon{
+    display: none;
+}
 
 .products{
     display: grid;
@@ -175,6 +196,7 @@
     justify-content: flex-start;
     align-self: flex-start;
     gap: 10px;
+    margin-bottom: 24px;
 }
 
 .product-image{
@@ -237,6 +259,7 @@
                              'filter'
                              'products';
        grid-template-columns: 100%;
+       gap: 8px;
     }
     .categories{
         gap: 5px;
@@ -245,8 +268,28 @@
         width: 100%;
     }
     .product-filter{
+        position: sticky;
+        z-index: 300;
+        top:57px;
         min-height: auto;
-        width: 85%;
+        width: 100%;
+        padding:2px 24px;
+    }
+    .filter-head{
+        justify-content: space-between;
+    }
+    .filter-title{
+        font-size: 1rem;
+    }
+    .filter-icon{
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: block;
+        transition: all 0.1s ease-in-out;
+    }
+    .rotate{
+        transform: rotate(-90deg);
     }
     .product-filter,.categories,.products{
         justify-self: center;
@@ -268,10 +311,12 @@
 }
 
 
-
 @media screen and (min-width:561px) {
-    .product:hover .product-image>img{
-        transform:scale(1.03);
+    .product{
+        transition: all 0.12s ease-in-out;
+    }
+    .product:hover{
+        transform:scale(1.02);
     }
 }
 

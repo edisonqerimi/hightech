@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HIGH Tech - Shop</title>
-    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/shop.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -28,18 +28,28 @@
                 <div class="category category-more show-sidebar">MORE</div>
             </div>
             <div class="product-filter shop-grid-item">
-                <div class="filter-title">Product Filter</div>
-
-                <div class='filter-price'>
-                    <div>Price</div>
-                    <div class="price-label">
-                        <div class="min-price">min</div>
-                        <div class="output-price">max</div>
-                    </div>
-                    <div class="price-io">
-                        <input step="10" type='range' id="price-Input" />
+                <div class="filter-head">
+                    <div class="filter-title">Product Filter</div>
+                    <svg class="filter-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.2426 6.34317L14.8284 4.92896L7.75739 12L14.8285 19.0711L16.2427 17.6569L10.5858 12L16.2426 6.34317Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="filter-body">
+                    <div class='filter-price'>
+                        <div>Price</div>
+                        <div class="price-label">
+                            <div class="min-price">min</div>
+                            <div class="output-price">max</div>
+                        </div>
+                        <div class="price-io">
+                            <input step="10" type='range' id="price-Input" />
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div id="products" class="products"></div>
         </div>
