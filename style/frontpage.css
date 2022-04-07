@@ -9,13 +9,17 @@
     min-height: 90vh;
     grid-area: main;
     color: #050401;
-    background-color: #e6e1e6;
+    
+    background: linear-gradient(to bottom,#fffaff, rgba(255, 255, 255, 0.85)), url('../img/main2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 58px;
     overflow: hidden;
-    border-bottom: 1px rgb(160, 160, 160) solid;
     padding: 0 64px;
 }
 
@@ -177,15 +181,6 @@
     .main-image {
         display: none;
     }
-
-    .main {
-        flex-direction: column;
-        background: linear-gradient(to bottom,#fffaff, rgba(255, 255, 255, 0.8)), url('../img/main2.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-
     .article1-cmimi {
         font-size: 1.05rem;
     }
