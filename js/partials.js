@@ -207,7 +207,10 @@ document.querySelector('.footer').innerHTML = `
     <div class='footer-start'>
         <div class='footer-item footer-item1'>
             <h2>Subscribe</h2>
-            <input class='search-input' placeholder='Enter email address'/>
+            <form class='footer-form'>
+                <input class='search-input' placeholder='Enter email address'/>
+                <button class='btn btn-info'>Send</button>
+            </form>
         </div>
         <div class='footer-item footer-item2'>
             <div class='footer-links-left footer-links'>
@@ -220,7 +223,7 @@ document.querySelector('.footer').innerHTML = `
                 <a href="./register.html" class="footer-link">
                     Sign Up
                 </a>
-                <a href="./register.html" class="footer-link">
+                <a href="./cart.html" class="footer-link">
                     Cart
                 </a>
             </div>

@@ -404,6 +404,12 @@ a{
     justify-content: space-between;
     gap: 24px;
 }
+.footer-form{
+    display: flex;
+}
+.footer-form .btn{
+    border-radius: 0;
+}
 .footer-start h2{
     text-transform: uppercase;
     font-size: 16px;
@@ -411,7 +417,7 @@ a{
 }
 .footer-start .search-input{
     height: 42px;
-    width: 240px;
+    width: 200px;
 }
 
 
