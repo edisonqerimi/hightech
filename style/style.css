@@ -178,6 +178,7 @@ a{
     font-size: 0.9rem;
     color: #050401;
     background-color: #FFFAFF;
+    padding-left: 8px;
     border: 0;
     border-radius: 1px;
     margin: 0;
@@ -379,14 +380,74 @@ a{
 }
 
 .footer{
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    justify-content: space-between;
-    font-size: 0.8rem;
-    padding: 10px;
+    font-size: 1rem;
 }
 
+.footer-end{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 10px 24px;
+    font-size: 14px;
+}
+.footer-end-links{
+    display: flex;
+    gap: 6px;
+}
+.footer-start{
+    
+    border-bottom: 1px rgb(160, 160, 160) solid;
+    border-top: 1px rgb(160, 160, 160) solid;
+    padding: 32px 64px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.footer-start h2{
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.footer-start .search-input{
+    height: 42px;
+    width: 240px;
+}
+
+
+.footer-item1,.footer-item3{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+
+.footer-item2{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer a{
+    color: #fffaff;
+    padding: 8px 10px;
+}
+.footer-links a:hover{
+    color: #AAA;
+}
+.footer-icons{
+    display: flex;
+    gap: 8px;
+}
 .side-row:hover{
     color:#464542;
 }
@@ -479,6 +540,7 @@ a{
 }
 
 
+
 @media screen and (max-width:768px) {
     #nav{
         padding: 8px 20px;
@@ -491,5 +553,9 @@ a{
     }
     .hamburger{
         display: block;
+    }
+    .footer-start,.footer-end{
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }

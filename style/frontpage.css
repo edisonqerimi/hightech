@@ -6,7 +6,7 @@
 }
 
 .main {
-    height: 90vh;
+    min-height: 90vh;
     grid-area: main;
     color: #050401;
     background-color: #e6e1e6;
@@ -15,32 +15,38 @@
     align-items: center;
     gap: 58px;
     overflow: hidden;
+    border-bottom: 1px rgb(160, 160, 160) solid;
+    padding: 0 64px;
 }
 
 .main-items {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 16px 56px;
 }
 
 .main-image {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 24px;
+
+    min-width: 400px;
+    max-height: 400px;
+
 }
 
-.main-image img {
+.main-image img{
+    object-fit: contain;
     width: 100%;
+    height: 100%;
 }
-
 .main-header {
     font-size: 2.25rem;
     text-transform: uppercase;
     margin-bottom: 18px;
     letter-spacing: 1px;
     color: #14323E;
+    font-weight: 500;
 }
 
 .main-desc {
@@ -57,10 +63,24 @@
     font-size: larger;
     border-radius: 2px;
     text-transform: uppercase;
-    padding: 10px 30px;
+    padding: 8px 24px;
 }
 
+.shop-button{
+    border: 2px solid #307692;
+}
 
+.login-button{
+    background: transparent;
+    color: #050401;
+    border: 2px solid #050401;
+}
+.login-button:hover{
+    background-color:#cfcbcf;
+}
+.login-button:active{
+    background-color: #b8b4b8;
+}
 .main-buttons {
     display: flex;
     align-items: center;
@@ -68,7 +88,7 @@
 }
 
 .photo1 {
-    height: 100vh;
+    min-height: 100vh;
     grid-area: first;
 }
 
@@ -118,7 +138,7 @@
 
 .article1-title {
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 
@@ -142,7 +162,7 @@
 }
 
 .article1 {
-    padding: 40px;
+    padding: 24px;
 }
 
 @media screen and (max-width:768px) {
@@ -151,7 +171,7 @@
     }
 
     .photo {
-        height: 50vh;
+        min-height: 50vh;
     }
 
     .main-image {
@@ -172,15 +192,11 @@
 
     .article1-title{
         font-size: 1.5rem;
+        margin-bottom: 0;
     }
 
     .article1 {
         padding: 10px;
-    }
-
-    .login-button {
-        padding: 10px 30px;
-        border: 0;
     }
 
     .main-text {
