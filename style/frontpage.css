@@ -46,8 +46,8 @@
     font-size: 2.25rem;
     text-transform: uppercase;
     margin-bottom: 18px;
-    letter-spacing: -1px;
     font-weight: 500;
+    letter-spacing: -1px;
 }
 
 .main-desc {
@@ -181,9 +181,12 @@
 }
 .about-us h2{
     margin-bottom: 10px;
-    font-size: 2.25rem;
+    font-size: 2rem;
     letter-spacing: -1px;
+    
+    line-height: 1.4;
     margin-bottom: 18px;
+    font-weight: 500;
 }
 .about-us p{
     font-size: 1.05rem;
