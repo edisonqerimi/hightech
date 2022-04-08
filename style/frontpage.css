@@ -184,12 +184,12 @@
     font-size: 2rem;
     letter-spacing: -1px;
     
-    line-height: 1.4;
     margin-bottom: 18px;
     font-weight: 500;
 }
 .about-us p{
     font-size: 1.05rem;
+    line-height: 1.4;
     letter-spacing: 1px;
     margin-bottom: 36px;
 }
