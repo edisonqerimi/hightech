@@ -1,13 +1,11 @@
 .grid {
     display: grid;
-    grid-template-areas: 'main main main'
-        'first first second'
-        'first first third';
+    grid-template-areas:  'first first second'
+                          'first first third';
 }
 
 .main {
     min-height: 90vh;
-    grid-area: main;
     color: #050401;
     
     background: linear-gradient(to bottom,#fffaff, rgba(255, 255, 255, 0.85)), url('../img/main2.jpg');
@@ -48,17 +46,15 @@
     font-size: 2.25rem;
     text-transform: uppercase;
     margin-bottom: 18px;
-    letter-spacing: 1px;
-    color: #14323E;
+    letter-spacing: -1px;
     font-weight: 500;
 }
 
 .main-desc {
-    margin-bottom: 42px;
+    margin-bottom: 36px;
     line-height: 1.4;
     letter-spacing: 1px;
     font-size: 1.05rem;
-    font-weight: 500;
 }
 
 
@@ -95,20 +91,6 @@
     min-height: 100vh;
     grid-area: first;
 }
-
-.img-holder1 {
-    background: url('../img/iphone.png');
-}
-
-.img-holder2 {
-    background: url('../img/hp.jpg');
-}
-
-.img-holder3 {
-    background-color: #fffaff;
-    background-image: url('../img/sony.png');
-}
-
 .photo2 {
     grid-area: second;
 }
@@ -119,10 +101,25 @@
     color: #050401;
     display: flex;
     align-items: flex-end;
+    background-color: #fffaff;
+}
+
+
+.img-holder1 {
+    background:linear-gradient(to right,#b8b4b828, rgba(255, 255, 255, 0.2)),  url('../img/iphone.jpg');
+}
+
+.img-holder2 {
+    
+    background:linear-gradient(to right,#b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/hp-envy.jpg');
+}
+
+.img-holder3 {
+    background-color: #fffaff;
+    background-image:linear-gradient(to right,#b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/sony.png');
 }
 
 .img-holder {
-    z-index: -1;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -141,8 +138,8 @@
 }
 
 .article1-title {
-    font-size: 2.5rem;
-    margin-bottom: 12px;
+    font-size: 2rem;
+    margin-bottom: 8px;
 }
 
 
@@ -162,6 +159,7 @@
     background: #fffaffb6;
     width: 100%;
     text-align: center;
+    z-index: 1;
     padding: 10px;
 }
 
@@ -169,15 +167,56 @@
     padding: 24px;
 }
 
+.about-us{
+    min-height: 80vh;
+    background:linear-gradient(to bottom,rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("../img/laptop2.jpg");
+    background-size:cover;
+    background-position:bottom;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 64px;
+    color: #050401;
+    display: flex;
+    gap: 24px;
+}
+.about-us h2{
+    margin-bottom: 10px;
+    font-size: 2.25rem;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+}
+.about-us p{
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    margin-bottom: 36px;
+}
+.about-image img{
+    width: 50%;
+    border-radius: 50%;
+}
+.about-content{
+    width: 50%;
+}
+
 @media screen and (max-width:768px) {
     .grid {
-        grid-template-areas: 'main' 'first' 'second' 'third';
+        grid-template-columns:1fr;
+        grid-template-areas: 'first' 'second' 'third';
     }
-
+    .about-image{
+        display: none;
+    }
+    .about-us{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .photo {
-        min-height: 50vh;
+        min-height: 60vh;
     }
 
+    .about-content{
+        width: 100%;
+    }
     .main-image {
         display: none;
     }

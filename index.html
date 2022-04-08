@@ -14,62 +14,74 @@
 <body>
     <nav id="nav"></nav>
 
-    <div id="sidebar"></div>
+    <aside id="sidebar"></aside>
 
-    <div class="banner"></div>
+    <section class="banner"></section>
+    <section class="main">
+        <div class="main-items">
+            <div class="main-header">
+                Technology for your needs
+            </div>
+            <p class="main-desc">Shop for tech products with us, guaranteed quality, fast delivery and arrived
+                safely to the destination.</p>
+            <div class="main-buttons"> <a href="./shop.html" class="btn btn-info shop-button">
+                    Shop
+                </a>
+                <a href="./register.html" class="btn login-button">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+        <div class="main-image">
+            <img draggable="false" src="./img/dell.png" alt="Dell">
+        </div>
+    </section>
+    
+    <section class="about-us">
 
-    <div class="container">
-        <div class="grid">
-            <div class="main">
-                <div class="main-items">
-                    <div class="main-header">
-                        Technology for your needs
-                    </div>
-                    <p class="main-desc">Shop for tech products with us, guaranteed quality, fast delivery and arrived
-                        safely to the destination.</p>
-                    <div class="main-buttons"> <a href="./shop.html" class="btn btn-info shop-button">
-                            Shop
-                        </a>
-                        <a href="./register.html" class="btn login-button">
-                            Sign Up
-                        </a>
-                    </div>
-                </div>
-                <div class="main-image">
-                    <img draggable="false" src="./img/dell.png" alt="Dell">
+        <div class="about-image">
+            <img src="./img/guarantee.webp" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2>OUR GUARANTEE</h2>
+            <p> We give you a 30-day 100% satisfaction guarantee on all products we sell, so if you are not happy for
+                any
+                reason with the quality, just ask for money back.
+            </p>
+            <a class="btn login-button" href="#">Learn more</a>
+        </div>
+    </section>
+    <section class="container grid">
+        <a href="./details.html?product-id=4" class="photo photo1">
+            <div class="img-holder img-holder2"></div>
+            <div class="article1 article">
+                <div class="article1-title">HP ENVY 17t-ch000</div>
+                <div class="article1-cmimi">
+                    <span style="text-decoration: line-through; color: #362417;">1099.99&euro;</span> 699.99&euro;
                 </div>
             </div>
-            <a id="start-position" href="./details.html?product-id=1" class="photo photo1">
-                <div class="img-holder img-holder1"></div>
-                <div class="article1 article">
-                    <div class="article1-title">iPhone 13 Pro Max</div>
-                    <div class="article1-cmimi">
-                        <span style="text-decoration: line-through; color: #362417;">1199.50&euro;</span> 1150.49&euro;
-                    </div>
+        </a>
+        <a href="./details.html?product-id=1" class="photo photo2">
+            <div class="img-holder img-holder1"></div>
+            <div class="article2 article">
+                <div class="article-title">iPhone 13 Pro Max</div>
+                <div class="cmimi">
+                    <span style="text-decoration: line-through;color:#460D01;">1199.50&euro;</span> 1150.49&euro;
                 </div>
-            </a>
-            <a href="./details.html?product-id=4" class="photo photo2">
-                <div class="img-holder img-holder2"></div>
-                <div class="article2 article">
-                    <div class="article-title">HP ENVY 17t-ch000</div>
-                    <div class="cmimi">
-                        <span style="text-decoration: line-through;color:#460D01;">1099.99&euro;</span> 699.99&euro;
-                    </div>
+            </div>
+        </a>
+        <a href="./details.html?product-id=6" class="photo photo3">
+            <div class="img-holder img-holder3"></div>
+            <div class="article2 article">
+                <div class="article-title">Sony WH-1000XM4</div>
+                <div class="cmimi">
+                    <span style="text-decoration: line-through;color:#460D01;">349.99&euro;</span> 279.99&euro;
                 </div>
-            </a>
-            <a href="./details.html?product-id=6" class="photo photo3">
-                <div class="img-holder img-holder3"></div>
-                <div class="article2 article">
-                    <div class="article-title">Sony WH-1000XM4</div>
-                    <div class="cmimi">
-                        <span style="text-decoration: line-through;color:#460D01;">349.99&euro;</span> 279.99&euro;
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="footer"></div>
+            </div>
+        </a>
+    </section>
+    <footer class="footer"></footer>
     <script src="./js/partials.js"></script>
     <script src="./js/index.js"></script>
 </body>
