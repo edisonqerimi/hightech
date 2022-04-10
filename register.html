@@ -12,9 +12,9 @@
 
 <body>
     <nav id="nav"></nav>
-    <div id="sidebar"></div>
-    <div style="display: none;" class="banner"></div>
-    <div class="container-height cont-center">
+    <aside id="sidebar"></aside>
+    <section style="display: none;" class="banner"></section>
+    <section class="container-height cont-center">
         <form class="login-form">
             <div class="login-header">
                 <div class="login-title">Sign Up</div>
@@ -37,11 +37,11 @@
                 <input required placeholder="Enter username" class="login-input" name="username" id="username" />
             </div>
             <div class="login-item">
-                <label for="username">Email address</label>
+                <label for="email">Email address</label>
                 <input required type="email" placeholder="Enter email" class="login-input" name="email" id="email" />
             </div>
             <div class="login-item">
-                <label for="username">Confirm email</label>
+                <label for="confirm-Email">Confirm email</label>
                 <input required type="email" placeholder="Confirm email" class="login-input" name="confirm-email" id="confirm-Email" />
             </div>
             <div class="login-item">
@@ -49,15 +49,15 @@
                 <input required placeholder="Enter password" type="password" class="login-input" name="password" id="password" />
             </div>
             <div class="login-item">
-                <label for="password">Confirm password</label>
+                <label for="confirm-Password">Confirm password</label>
                 <input required placeholder="Enter password" type="password" class="login-input" name="confirm-password" id="confirm-Password" />
             </div>
             <div class="buttons">
                 <button class="btn btn-info">Register</button>
             </div>
         </form>
-    </div>
-    <div class="footer"></div>
+    </section>
+    <footer class="footer"></footer>
     <script src="./js/partials.js"></script>
     <script type="module" src="./js/initUsers.js"></script>
     <script src="./js/register.js"></script>
