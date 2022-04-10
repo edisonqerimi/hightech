@@ -113,7 +113,7 @@ window.onload = () => {
         if (window.innerWidth < 800) {
             filterBody.classList.toggle('hidden');
         }
-        document.querySelector('.filter-icon').classList.toggle('rotate');
+        filterIcon.classList.toggle('rotate');
     }
 
     if (products.length > 0) {

@@ -209,7 +209,7 @@ document.querySelector('.footer').innerHTML = `
             <h2>Subscribe</h2>
             <form class='footer-form'>
                 <input class='search-input' placeholder='Enter email address'/>
-                <button class='btn btn-info'>Send</button>
+                <button class='btn btn-info'>Subscribe</button>
             </form>
         </div>
         <div class='footer-item footer-item2'>
