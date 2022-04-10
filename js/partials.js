@@ -24,7 +24,7 @@ const supportIcon = `
 `;
 
 const hamburgerIcon = `
-    <svg viewBox="0 0 24 24" fill="none"
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
     xmlns="http://www.w3.org/2000/svg">
         <path
             d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
@@ -39,7 +39,7 @@ const hamburgerIcon = `
 `;
 
 const logoIcon = `
-    <svg xmlns="http://www.w3.org/2000/svg" class='logo' fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
     </svg>
 `;
@@ -97,16 +97,16 @@ document.getElementById('nav').innerHTML = `
 
         <div class="nav-start">
             <a class='icon-title' href="index.html">
-                ${logoIcon}
+                <div class='nav-logo'>${logoIcon}</div>
                 <div class="nav-title">HIGH TECH</div>
             </a>
 
-            <div class="items">
+            <div class="nav-items">
                 <a id='shop-item' href="./shop.html" class="nav-item">
                     <div>Shop</div>
                     <!--${bagIcon}-->
                 </a>
-                <a href="#" class="nav-item">
+                <a id='support' class="nav-item">
                     <div>Support</div>
                     <!--${supportIcon}-->
                 </a>
@@ -150,7 +150,7 @@ document.getElementById('sidebar').innerHTML = `
 
     <div class="side-title-container">
         <a class='side-title' href="index.html">
-            <div class='logo'>${logoIcon}</div>
+            <div class='nav-logo'>${logoIcon}</div>
             <div>HIGH TECH</div>
         </a>
     </div>
@@ -213,7 +213,7 @@ document.querySelector('.footer').innerHTML = `
             </form>
         </div>
         <div class='footer-item footer-item2'>
-        <h2>All links</h2>
+        <h2>Quick links</h2>
         <div class='links-container'>
             <div class='footer-links-left footer-links'>
                 <a href="#" class="footer-link">

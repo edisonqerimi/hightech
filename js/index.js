@@ -40,10 +40,14 @@ for (let i = 0; i < length; i++) {
     })
 }
 
-
-document.querySelector('.close').addEventListener('click', () => {
+document.querySelector('.close').onclick = () => {
     sidebar.style.display = 'none';
-})
+}
+document.querySelector('#support').onclick = () => {
+    document.querySelector('.footer').scrollIntoView({
+        behavior: "smooth"
+    })
+}
 
 if (JSON.parse(sessionStorage.getItem('banner-closed'))) {
     document.querySelector('.banner').style.display = 'none';

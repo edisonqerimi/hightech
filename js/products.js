@@ -186,9 +186,9 @@ const bindProducts = (products, element) => {
                 <div class="product-title">${p.brand} ${p.model}</div>
                 <div class="product-price">
                 ${p.discount.isDiscount ?
-                    `<div class="discount-price">${p.discount.priceDiscount.toFixed(2)} &euro;</div>` : ''
+                    `<div class="discount-price">${p.discount.priceDiscount.toFixed(2)}&euro;</div>` : ''
                 }   
-                <div class='${p.discount.isDiscount ? "discount" : ''}'>${p.price.toFixed(2)} &euro;</div>
+                <div class='${p.discount.isDiscount ? "discount" : ''}'>${p.price.toFixed(2)}&euro;</div>
                 </div>
                 <div class="product-buttons">
                     <a href='./details.html?product-id=${p.id}' class="btn product-btn">More info</a>
