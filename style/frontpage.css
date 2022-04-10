@@ -1,11 +1,9 @@
-
-
 /* ----------- HERO Start ----------- */
 
-.hero-section{
+.hero-section {
     min-height: 90vh;
-    color: #050401;  
-    background: linear-gradient(to bottom,#fffaff, rgba(255, 255, 255, 0.85)), url('../img/main2.jpg');
+    color: #050401;
+    background: linear-gradient(to bottom, #fffaff, rgba(255, 255, 255, 0.85)), url('../img/main2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -19,7 +17,7 @@
     gap: 1.6rem;
 }
 
-.hero-item{
+.hero-item {
     flex: 50%;
 }
 
@@ -37,10 +35,11 @@
     max-height: 350px;
 }
 
-.hero-image img{
+.hero-image img {
     object-fit: contain;
     width: 95%;
 }
+
 .hero-title {
     font-size: 3.8rem;
     text-transform: uppercase;
@@ -63,6 +62,7 @@
     align-items: center;
     gap: 0.8rem;
 }
+
 .shop-button,
 .login-button {
     font-size: larger;
@@ -71,54 +71,60 @@
     padding: 0.8rem 2.4rem;
 }
 
-.shop-button{
+.shop-button {
     border: 2px solid #307692;
 }
 
-.login-button{
+.login-button {
     background: transparent;
     color: #050401;
     border: 2px solid #050401;
 }
-.login-button:hover{
-    background-color:#cfcbcf;
+
+.login-button:hover {
+    background-color: #cfcbcf;
 }
-.login-button:active{
+
+.login-button:active {
     background-color: #b8b4b8;
 }
 
 /* ----------- HERO End ----------- */
 
 /* ----------- offer Start ----------- */
-.offers-section{
+.offers-section {
     padding: 8rem 0;
-    background:linear-gradient(to bottom,rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("../img/laptop2.jpg");
-    background-size:cover;
-    background-position:bottom;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("../img/laptop2.jpg");
+    background-size: cover;
+    background-position: bottom;
 
 }
-.offers-section .container{
+
+.offers-section .container {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     align-items: center;
 }
-.offers{
+
+.offers {
     color: #050401;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     row-gap: 3.6rem;
     column-gap: 1.2rem;
     margin-bottom: 2rem;
 }
-.offers h2{
+
+.offers h2 {
     font-size: 3.6rem;
     letter-spacing: -1px;
     margin-bottom: 1.4rem;
     font-weight: 500;
 }
-.offers-section h1{
+
+.offers-section h1 {
     color: #307692;
     font-size: 2.4rem;
     text-transform: uppercase;
@@ -126,17 +132,19 @@
     font-weight: 500;
 }
 
-.offers p{
+.offers p {
     font-size: 1.8rem;
     line-height: 1.4;
     color: #222;
     font-weight: 500;
 }
-.offer-image{
+
+.offer-image {
     display: flex;
     justify-content: center;
 }
-.offer-image img{
+
+.offer-image img {
     object-fit: contain;
     filter: grayscale(100%);
     filter: contrast(200%);
@@ -152,8 +160,8 @@
 
 .products-gallery {
     display: grid;
-    grid-template-areas:  'first first second'
-                          'first first third';
+    grid-template-areas: 'first first second'
+        'first first third';
 }
 
 .photo {
@@ -164,29 +172,32 @@
     align-items: flex-end;
     background-color: #fffaff;
 }
+
 .photo1 {
     min-height: 100vh;
     grid-area: first;
 }
+
 .photo2 {
     grid-area: second;
 }
+
 .photo3 {
     grid-area: third;
 }
 
 .img-holder1 {
-    background:linear-gradient(to right,#b8b4b828, rgba(255, 255, 255, 0.2)),  url('../img/iphone.jpg');
+    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/iphone.jpg');
 }
 
 .img-holder2 {
-    
-    background:linear-gradient(to right,#b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/hp-envy.jpg');
+
+    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/hp-envy.jpg');
 }
 
 .img-holder3 {
     background-color: #fffaff;
-    background-image:linear-gradient(to right,#b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/sony.png');
+    background-image: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/sony.png');
 }
 
 .img-holder {
@@ -223,6 +234,7 @@
     font-size: 3.2rem;
     margin-bottom: 0.4rem;
 }
+
 .gallery-product1-cmimi {
     font-size: 2.4rem;
 }
@@ -236,33 +248,45 @@
 
 @media screen and (max-width:768px) {
     .products-gallery {
-        grid-template-columns:1fr;
-        grid-template-areas: 'first' 'second' 'third';
-    }
-    .offer-image{
-        display: none;
-    }
-    .offers-section .container{
-        align-items: flex-start;
-    }
-    .offers{
         grid-template-columns: 1fr;
+        grid-template-areas: 'first'
+            'second'
+            'third';
     }
+
+    .offer-image1 {
+        grid-row: 1;
+    }
+
+    .offers-section .container {
+        align-items: flex-start;
+        padding: 0 2.4rem;
+    }
+    .offers p{
+        margin-bottom: 2.4rem;
+    }
+    .offers {
+        grid-template-columns: 1fr;
+        row-gap: 2.4rem;
+    }
+
     .photo {
         min-height: 60vh;
     }
 
-    .about-content{
+    .about-content {
         width: 100%;
     }
+
     .hero-image {
         display: none;
     }
+
     .gallery-product1-cmimi {
         font-size: 1.6rem;
     }
 
-    .gallery-product1-title{
+    .gallery-product1-title {
         font-size: 2.4rem;
         margin-bottom: 0;
     }
