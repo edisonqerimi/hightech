@@ -482,7 +482,7 @@ a {
 .footer-end {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 2.4rem;
     justify-content: space-between;
     padding: 1rem 2.4rem;
     font-size: 1.4rem;
@@ -490,7 +490,7 @@ a {
 
 .footer-end-links {
     display: flex;
-    gap: 0.6rem;
+    gap: 1rem;
 }
 
 .footer-start {
@@ -606,7 +606,9 @@ a {
 } */
 
 @media screen and (max-width:768px) {
-
+    #nav{
+        padding: 0.8rem;
+    }
     .nav-title {
         display: block;
     }
