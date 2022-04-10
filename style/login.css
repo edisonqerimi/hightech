@@ -8,37 +8,38 @@
 .login-form{
     box-shadow: 0px 0px 1px #050401a8;
     width: 500px;
+    margin: 10px 0;
     background-color: #D3CED4;
-    padding: 50px ;
-    gap: 18px;
+    padding: 4.8rem ;
+    gap: 1.8rem;
 }
 
 .login-item{
-    gap: 4px;
+    gap: 0.4rem;
 }
 .login-input{
-    font-size: 1.08rem;
+    font-size: 1.6rem;
     outline: none;
-    height: 40px;
+    height: 38px;
     border: 0;
     box-shadow: 0px 1px 2px #05040177;
     background-color: #FFFAFF;
-    padding-left: 10px;
+    padding-left: 1rem;
     transition: all 0.15s ease-in;
 }
 
 .login-input:focus{
-    font-size: 1.05rem;
+    font-size: 1.55rem;
     box-shadow: 0px 0px 3px #05040177;
 }
 
 .buttons{
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .login-title{
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 
 .login-header {
