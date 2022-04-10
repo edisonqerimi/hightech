@@ -83,4 +83,16 @@
         align-items: center;
     }
 
+    
+}
+
+@media screen and (max-width:450px) {
+    .profile-picture {
+        width: 100%;
+        height: auto;
+    }
+
+    .userinfo{
+        padding: 1.2rem 0;
+    }
 }
