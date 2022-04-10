@@ -95,6 +95,9 @@
     background:linear-gradient(to bottom,rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("../img/laptop2.jpg");
     background-size:cover;
     background-position:bottom;
+
+}
+.offers-section .container{
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
@@ -107,6 +110,7 @@
     align-items: center;
     row-gap: 3.6rem;
     column-gap: 1.2rem;
+    margin-bottom: 2rem;
 }
 .offers h2{
     font-size: 3.6rem;
@@ -115,6 +119,7 @@
     font-weight: 500;
 }
 .offers-section h1{
+    color: #307692;
     font-size: 2.4rem;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -235,10 +240,10 @@
         grid-template-areas: 'first' 'second' 'third';
     }
     .offer-image{
-        justify-content: flex-start;
+        display: none;
     }
-    .offer-image2{
-        grid-row: 3;
+    .offers-section .container{
+        align-items: flex-start;
     }
     .offers{
         grid-template-columns: 1fr;
