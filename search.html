@@ -14,7 +14,7 @@
     <aside id="sidebar"></aside>
 
     <section class="hidden banner"></section>
-    <section class="container-height center">
+    <section class="container-height container">
         <div id="searching">Search results for: <span id="search-Param"></span></div>
         <div style="width: 100%;" id="products" class="products"></div>
     </section>
@@ -25,13 +25,22 @@
     <script type="module" src="./js/search.js"></script>
     <script src="./js/addToCart.js"></script>
     <style>
+        .container{
+            padding: 0 1.2rem;
+        }
         #searching{
-            font-size: 1.3rem;
+            font-size: 2.4rem;
             color: #050401;
-            margin: 20px 0;
+            margin: 2.4rem 0;
         }
         #search-Param{
             color: #307692;
+        }
+        @media screen and (max-width:768px) {
+            
+        .products{
+            padding:0 3.2rem;
+        }
         }
     </style>
 </body>
