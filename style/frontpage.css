@@ -89,43 +89,58 @@
 
 /* ----------- HERO End ----------- */
 
-/* ----------- GUARANTEE Start ----------- */
-.guarantee-section{
-    min-height: 80vh;
+/* ----------- offer Start ----------- */
+.offers-section{
+    padding: 8rem 0;
     background:linear-gradient(to bottom,rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("../img/laptop2.jpg");
     background-size:cover;
     background-position:bottom;
     display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
     align-items: center;
 }
-.guarantee{
+.offers{
     color: #050401;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
-    gap: 2.4rem;
+    row-gap: 3.6rem;
+    column-gap: 1.2rem;
 }
-.guarantee h2{
+.offers h2{
     font-size: 3.6rem;
     letter-spacing: -1px;
     margin-bottom: 1.4rem;
     font-weight: 500;
 }
-.guarantee p{
+.offers-section h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+
+.offers p{
     font-size: 1.8rem;
     line-height: 1.4;
-    margin-bottom: 3.6rem;
     color: #222;
     font-weight: 500;
 }
-.guarantee-image img{
-    width: 50%;
+.offer-image{
+    display: flex;
+    justify-content: center;
+}
+.offer-image img{
+    object-fit: contain;
+    filter: grayscale(100%);
+    filter: contrast(200%);
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
 }
 
-.guarantee-item{
-    flex: 50%;
-}
-/* ----------- GUARANTEE End ----------- */
+/* ----------- offer End ----------- */
 
 
 /* ----------- PRODUCTS-GALLERY Start ----------- */
@@ -219,12 +234,14 @@
         grid-template-columns:1fr;
         grid-template-areas: 'first' 'second' 'third';
     }
-    .guarantee-image{
-        display: none;
+    .offer-image{
+        justify-content: flex-start;
     }
-    .guarantee{
-        flex-wrap: wrap;
-        justify-content: center;
+    .offer-image2{
+        grid-row: 3;
+    }
+    .offers{
+        grid-template-columns: 1fr;
     }
     .photo {
         min-height: 60vh;
