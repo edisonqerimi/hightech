@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/profile.css">
+    <title>HIGH Tech - Profile</title>
+</head>
+
+<body>
+    <nav id="nav"></nav>
+    <aside id="sidebar"></aside>
+    <section class="banner hidden"></section>
+
+    <section class="userinfo container container-height">
+            <form class="profile-container" id="profile-form">
+                <div class="image-container">
+                    <figure class="profile-picture">
+                        <img src="./img/profile.png" alt="">
+                    </figure>
+                    <div class="change-remove">
+                        <div class="btn change-picture">Change</div>
+                        <div class="btn btn-red remove-picture">Remove</div>
+                    </div>
+                </div>
+                <div class="profile-data">
+                    <h2 class="fullname-title">Will Smith</h2>
+                    <div class="profile-details">
+                        <div class="form-grid">
+                            <div class="form-control">
+                                <label for="firstname">First name</label>
+                                <input placeholder="First name" id="firstname">
+                            </div>
+                            <div class="form-control">
+                                <label for="lastname">Last name</label>
+                                <input placeholder="Last name" id="lastname">
+                            </div>
+                            <div class="form-control">
+                                <label for="username">Username</label>
+                                <input placeholder="Username" id="username">
+                            </div>
+                            <div class="form-control">
+                                <label for="email">Email</label>
+                                <input placeholder="Email address" id="email">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info">Update</button>
+                    </div>
+                </div>
+            </form>
+    </section>
+
+    <footer class="footer"></footer>
+
+    <script src="./js/partials.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/profile.js"></script>
+</body>
+
+</html>

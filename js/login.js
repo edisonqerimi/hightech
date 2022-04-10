@@ -7,7 +7,7 @@ if (returnPath != null) {
     returnPath = returnPath.split('.html')[0].split('/').pop();;
 }
 
-const loginForm = document.querySelector('.login-form');
+const loginForm = document.querySelector('#loginForm');
 const usernameInput = document.querySelector('#username');
 const passwordInput = document.querySelector('#password');
 const validation = document.querySelector('.validation');

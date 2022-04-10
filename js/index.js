@@ -75,7 +75,7 @@ if (currentUser != null) {
 
     if (currentUser.role == 'admin') {
         accountNav.innerHTML = accountSide.innerHTML = `
-                    <a class='account-icon' href='#'>
+                    <a class='account-icon' href='./profile.html'>
                         ${profileIcon}
                         <div>Account</div>
                     </a>

@@ -1,0 +1,51 @@
+.userinfo {
+    margin-top: 2.4rem;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2.4rem;
+    padding: 1.2rem;
+    background-color: #DDD;
+}
+
+.profile-data {
+    padding: 2.4rem 0;
+}
+
+.profile-container h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    padding: 0.6rem 0;
+    border-bottom: #AAA solid 2px;
+}
+
+.profile-details{
+    padding: 2.4rem 0;
+}
+.profile-picture{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 0.6rem;
+}
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.form-grid{
+    display: grid;
+    row-gap: 2.4rem;
+    column-gap: 3.2rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2.4rem;
+}
+.change-remove{
+    display: flex;
+    gap: 0.6rem;
+}
+.change-remove .btn{
+    padding: 0.6rem;
+}

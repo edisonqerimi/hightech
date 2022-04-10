@@ -8,7 +8,7 @@ const confirmEmail = document.querySelector('#confirm-Email');
 const password = document.querySelector('#password');
 const confirmPassword = document.querySelector('#confirm-Password');
 
-const registerForm = document.querySelector('.login-form');
+const registerForm = document.querySelector('#register-Form');
 const validation = document.querySelector('.validation');
 
 
@@ -64,7 +64,6 @@ window.onload = () => {
             };
             sessionStorage.setItem('currentUser', JSON.stringify(user));
             users.push(user);
-            console.log(users)
             sessionStorage.setItem('users',JSON.stringify(users));
             window.location = './index.html';
         }
