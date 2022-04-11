@@ -3,6 +3,7 @@ const params = new window.URLSearchParams(window.location.search);
 
 const filterBy = params.get('filter-by');
 const filterValue = params.get('filter-value');
+const sort = params.get('sort');
 
 const productsElement = document.querySelector('#products');
 
@@ -71,7 +72,45 @@ window.onload = () => {
             break;
     }
     bindFiltering(products, ['brand', 'color']);
-    bindProducts(products.filter((p) => p[filterBy] == filterValue), productsElement);
+
+    let filteredProducts = products.filter((p) => p[filterBy] == filterValue);
+    document.querySelector('#sort').value = sort;
+    
+    switch (sort) {
+        case 'az':
+            filteredProducts = filteredProducts.sort((a, b) => a.brand.localeCompare(b.brand));
+            break;
+        case 'za':
+            filteredProducts = filteredProducts.sort((a, b) => b.brand.localeCompare(a.brand));
+            break;
+        case 'to-lowest':
+            filteredProducts = filteredProducts.sort((a, b) => {
+                let aPrice = a.price;
+                let bPrice = b.price;
+                if (a.discount.isDiscount) {
+                    aPrice = a.discount.priceDiscount;
+                }
+                if (b.discount.isDiscount) {
+                    bPrice = b.discount.priceDiscount;
+                }
+                return bPrice - aPrice;
+            });
+            break;
+        case 'to-highest':
+            filteredProducts = filteredProducts.sort((a, b) => {
+                let aPrice = a.price;
+                let bPrice = b.price;
+                if (a.discount.isDiscount) {
+                    aPrice = a.discount.priceDiscount;
+                }
+                if (b.discount.isDiscount) {
+                    bPrice = b.discount.priceDiscount;
+                }
+                return aPrice - bPrice;
+            });
+            break;
+    }
+    bindProducts(filteredProducts, productsElement);
 
     const filterHeader = document.querySelectorAll('.filter-header');
     const pluses = document.querySelectorAll('.plus');
