@@ -9,6 +9,8 @@
     background-size: cover;
     display: flex;
     align-items: center;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
 }
 
 .hero {
@@ -31,8 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 350px;
-    max-height: 350px;
+    min-width: 300px;
 }
 
 .hero-image img {
@@ -118,7 +119,7 @@
 }
 
 .offers h2 {
-    font-size: 3.6rem;
+    font-size: 3rem;
     letter-spacing: -1px;
     margin-bottom: 1.4rem;
     font-weight: 500;
@@ -339,16 +340,19 @@
             'second'
             'third';
     }
-
+    .hero-title{
+        font-size: 3.2rem;
+    }
     .offer-image1 {
         grid-row: 1;
     }
 
     .offers-section .container {
         align-items: flex-start;
-        padding: 0 2.4rem;
     }
-
+    .offer-image{
+        justify-content: flex-start;
+    }
     .offers p {
         margin-bottom: 2.4rem;
     }
@@ -367,7 +371,7 @@
     }
 
     .hero-image {
-        display: none;
+        /* display: none; */
     }
 
     .gallery-product1-cmimi {
@@ -383,4 +387,11 @@
         padding: 1rem;
     }
 
+}
+
+@media screen and (max-width:640px) {
+    .hero{
+        gap: 3.2rem;
+        flex-direction: column;
+    }
 }

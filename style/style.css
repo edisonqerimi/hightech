@@ -692,6 +692,12 @@ a {
 } */
 
 @media screen and (max-width:768px) {
+    html{
+        font-size: 57%;
+    }
+    .container{
+        padding: 0 2.4rem;
+    }
     #nav {
         padding: 0.8rem;
     }
