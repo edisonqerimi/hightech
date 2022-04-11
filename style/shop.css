@@ -8,7 +8,7 @@
 }
 
 .shop-grid-item,.product{
-    background: #D3CED4;
+    background: #ddd;
 }
 
 /* ----------- CATEGORIES Start ----------- */
@@ -93,7 +93,7 @@
 }
 
 .filter-items{
-    background-color: #beb9bf;
+    background-color: #ccc;
     padding: 1rem;
 }
 

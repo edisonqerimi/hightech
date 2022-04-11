@@ -42,7 +42,12 @@
     font-size: 2.4rem;
 }
 
-.container{
-  width: 90%;
-  margin: 0 auto;
+.admin{
+    margin-top: 1.2rem;
+}
+
+@media screen and (max-width:1000px) {
+    .admin{
+        padding: 0;
+    }
 }

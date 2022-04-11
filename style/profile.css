@@ -18,7 +18,7 @@
     font-size: 2.4rem;
     font-weight: 500;
     padding: 0.6rem 0;
-    border-bottom: #AAA solid 2px;
+    border-bottom: #ccc solid 2px;
 }
 
 .profile-details {
@@ -93,6 +93,6 @@
     }
 
     .userinfo{
-        padding: 1.2rem 0;
+        padding: 0 1.2rem;
     }
 }

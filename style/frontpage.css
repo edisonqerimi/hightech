@@ -3,7 +3,7 @@
 .hero-section {
     min-height: 90vh;
     color: #050401;
-    background: linear-gradient(to bottom, #fffaff, rgba(255, 255, 255, 0.85)), url('../img/main2.jpg');
+    background: linear-gradient(to bottom, #fffaff, rgba(255, 255, 255, 0.9)), url('../img/main2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -124,13 +124,6 @@
     font-weight: 500;
 }
 
-.offers-section h1 {
-    color: #307692;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-weight: 500;
-}
 
 .offers p {
     font-size: 1.8rem;
@@ -245,6 +238,99 @@
 
 /* ----------- PRODUCTS-GALLERY End ----------- */
 
+/* ----------- FEATURED Start ----------- */
+
+.featured-section {
+    padding: 8rem 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("../img/background.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.featured-in{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title{
+    align-self: center;
+}
+
+.featured-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.featured-in .login-button{
+    align-self: center;
+}
+
+.featured-item {
+    border-radius: 3px;
+    color: #050401;
+    overflow: hidden;
+}
+
+.featured-item:hover .featured-image {
+    transform: scale(1.03);
+}
+
+.featured-image1 {
+    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.5)), url('../img/laptop.jpg');
+}
+
+.featured-image2 {
+    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.5)), url('../img/smartphone.jpg');
+}
+
+.featured-image3 {
+    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.5)), url('../img/desktop.jpg');
+}
+
+.featured-image4 {
+    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.5)), url('../img/accessory.jpg');
+}
+
+.featured-image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.featured-image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.12s ease-in;
+}
+
+.section-title {
+    margin-bottom: 3.6rem;
+}
+
+.featured-content {
+    padding: 1.4rem 2.4rem;
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #222;
+}
+
+/* ----------- FEATURED End ----------- */
+
+@media screen and (max-width:1130px) {
+    .featured-items {
+        gap: 1.2rem;
+    }
+}
 
 @media screen and (max-width:768px) {
     .products-gallery {
@@ -262,9 +348,11 @@
         align-items: flex-start;
         padding: 0 2.4rem;
     }
-    .offers p{
+
+    .offers p {
         margin-bottom: 2.4rem;
     }
+
     .offers {
         grid-template-columns: 1fr;
         row-gap: 2.4rem;
