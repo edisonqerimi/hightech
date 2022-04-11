@@ -5,6 +5,11 @@ const filterBy = params.get('filter-by');
 const filterValue = params.get('filter-value');
 const sort = params.get('sort');
 
+
+if (sort != null) {
+    document.querySelector('#sort').value = sort;
+}
+
 const productsElement = document.querySelector('#products');
 
 
@@ -74,8 +79,8 @@ window.onload = () => {
     bindFiltering(products, ['brand', 'color']);
 
     let filteredProducts = products.filter((p) => p[filterBy] == filterValue);
-    document.querySelector('#sort').value = sort;
-    
+
+
     switch (sort) {
         case 'az':
             filteredProducts = filteredProducts.sort((a, b) => a.brand.localeCompare(b.brand));
@@ -108,6 +113,9 @@ window.onload = () => {
                 }
                 return aPrice - bPrice;
             });
+            break;
+        default:
+            document.querySelector('#sort').value = 'relevant';
             break;
     }
     bindProducts(filteredProducts, productsElement);

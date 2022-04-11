@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIGH Tech - Smartphones</title>
+    <title>HIGH Tech - Shop</title>
     <link rel="stylesheet" href="./style/shop.css">
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -50,7 +50,25 @@
                     </div>
                 </div>
             </div>
-            <div id="products" class="products"></div>
+            <div class="products-section">
+                <div class="sort-products">
+                    <form>
+                        <div class="select-control">
+                            <label for="sort">Sort:</label>
+                            <select onchange="this.form.submit()" name="sort" id="sort">
+                                <option value="relevant">Relevant</option>
+                                <option value="to-highest">Price lowest to highest</option>
+                                <option value="to-lowest">Price highest to lowest</option>
+                                <option value="az">A to Z</option>
+                                <option value="za">Z to A</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div id="products" class="products">
+
+                </div>
+            </div>
         </div>
     </section>
 
