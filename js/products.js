@@ -166,13 +166,91 @@ const products = [
             'soundControl': 'Yes',
             'batteryIndication': 'Yes',
         }
-    }
+    },
+    {
+        'id': 7,
+        'brand': 'HP',
+        'model': 'Pavilion Gaming Desktop TG01-2170m',
+        'category': 'desktop',
+        'price': 649.99,
+        'description': `Get ready to game on your terms. 
+                        This powerful rig is built to keep up with the games of today and tomorrow. 
+                        Beneath its compact and sleek exterior,
+                        you will find all the performance you need to play with confidence
+                        and room to expand and upgrade.`,
+        'color': 'black',
+        'discount': {
+            'isDiscount': true,
+            'priceDiscount': 549.99,
+        },
+        'amount': 5,
+        'img': './img/hp-pavillion.png',
+        'productDetails': {
+            'processor': 'AMD Ryzen™ 3 5300G',
+            'graphics': 'NVIDIA® GeForce® GTX 1650 SUPER™',
+            'ram': '8 GB DDR4-3200 SDRAM',
+            'storage': '512GB SSD',
+            'os': 'Windows 11'
+        }
+    },
+    {
+        'id': 8,
+        'brand': 'DELL',
+        'model': 'XPS 8950',
+        'category': 'desktop',
+        'price': 1049.99,
+        'description': `Down to even the smallest details,
+                        the XPS Desktop was designed for thermal efficiency and runs cooler
+                        than the previous generation* desktop. Cool air enters through a specially designed front bezel,
+                        moving front to back—over the graphics,
+                        power supply and M.2 SSD storage, without ever being recirculated.`,
+        'color': 'black',
+        'discount': {
+            'isDiscount': false,
+            'priceDiscount': 1199.99,
+        },
+        'amount': 3,
+        'img': './img/xps.png',
+        'productDetails': {
+            'processor': '12th Gen Intel® Core™ i7-12700 processor',
+            'graphics': 'Intel® UHD Graphics 770',
+            'ram': '16 GB, DDR5',
+            'storage': '512GB SSD',
+            'os': 'Windows 11'
+        }
+    },
+    {
+        'id': 9,
+        'brand': 'DELL',
+        'model': 'XPS 13-9305',
+        'category': 'laptop',
+        'price': 1199.99,
+        'description': `The ROG Flow Z13 is the most powerful all-purpose computer that you can get at this point in a compact 13-inch tablet form factor.
+                        Asus aced the design and screen options, didn't skimp on inputs, features, or the IO,
+                        and made sure the thermal design is perfectly capable of coping with the specs inside in demanding loads.`,
+        'color': 'silver',
+        'discount': {
+            'isDiscount': false,
+            'priceDiscount': 1199.99,
+        },
+        'amount': 15,
+        'img': './img/xps-13.webp',
+        'productDetails': {
+            'processor': '11th Gen Intel® Core™ i7-1165G7',
+            'graphics': 'Intel® Iris® Xe Graphics',
+            'ram': '8GB*2 LPDDR5',
+            'screenSize': '13.3"',
+            'storage': '512GB SSD',
+            'display': 'IPS',
+            'os': 'Windows 11'
+        }
+    },
 ];
 
 const bindProducts = (products, element) => {
     if (products.length > 0) {
         const addedToCart = document.createElement('div');
-        addedToCart.classList.add('added-cart','hidden');
+        addedToCart.classList.add('added-cart', 'hidden');
         addedToCart.innerHTML = 'Added to cart'
         element.appendChild(addedToCart);
         products.map(p => {

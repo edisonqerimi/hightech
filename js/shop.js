@@ -80,7 +80,6 @@ window.onload = () => {
 
     let filteredProducts = products.filter((p) => p[filterBy] == filterValue);
 
-
     switch (sort) {
         case 'az':
             filteredProducts = filteredProducts.sort((a, b) => a.brand.localeCompare(b.brand));
@@ -135,7 +134,7 @@ window.onload = () => {
             filterItems[i].classList.toggle('hidden');
         }
     })
-    const prices = products.map(p => p.discount.isDiscount ? p.discount.priceDiscount : p.price);
+    const prices = filteredProducts.map(p => p.discount.isDiscount ? p.discount.priceDiscount : p.price);
 
     const maxPrice = Math.max.apply(Math, prices);
     const minPrice = Math.min.apply(Math, prices);
@@ -174,7 +173,7 @@ window.onload = () => {
     priceInput.oninput = (e) => {
         const max = parseInt(e.target.value) + 2;
         outputPrice.innerHTML = `${Math.round(e.target.value)} &euro;`;
-        const newProducts = products.filter(p => p.discount.isDiscount ? p.discount.priceDiscount <= max : p.price <= max);
+        const newProducts = filteredProducts.filter(p => p.discount.isDiscount ? p.discount.priceDiscount <= max : p.price <= max);
         productsElement.innerHTML = '';
         bindProducts(newProducts, productsElement);
     }

@@ -69,6 +69,7 @@ window.onload = () => {
         ${detail('Screen size', details.screenSize)}
         ${detail('Display', details.display)}
         ${detail('Storage', details.storage)}
+        ${detail('OS', details.os)}
         `
     }
     if (product.category == 'accessory') {
@@ -79,6 +80,15 @@ window.onload = () => {
         ${detail('Adaptive Sound Control', details.soundControl)}
         ${detail('Playback Controller', details.playbackController)}
         ${detail('Battery level indication (icon with %)', details.batteryIndication)}
+        `
+    }
+    if (product.category == 'desktop') {
+        moreBody.innerHTML = `
+        ${detail('Processor', details.processor)}
+        ${detail('Graphics', details.graphics)}
+        ${detail('RAM', details.ram)}
+        ${detail('Storage', details.storage)}
+        ${detail('OS', details.os)}
         `
     }
 }
