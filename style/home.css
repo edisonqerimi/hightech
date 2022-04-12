@@ -156,6 +156,7 @@
     display: grid;
     grid-template-areas: 'first first second'
         'first first third';
+
 }
 
 .photo {
@@ -168,7 +169,7 @@
 }
 
 .photo1 {
-    min-height: 100vh;
+    height: 100vh;
     grid-area: first;
 }
 
@@ -181,12 +182,11 @@
 }
 
 .img-holder1 {
-    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/iphone.jpg');
+    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/iphone13promax.png');
 }
 
 .img-holder2 {
-
-    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/hp-envy.jpg');
+    background: linear-gradient(to right, #b8b4b828, rgba(255, 255, 255, 0.2)), url('../img/hp-envy.png');
 }
 
 .img-holder3 {
@@ -200,7 +200,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     transition: all 0.4s ease-in-out;
 }
 
@@ -213,7 +213,15 @@
 }
 
 .cmimi {
+    font-size: 1.8rem;
+}
+.cmimi .cmimi-normal {
     font-size: 1.6rem;
+}
+
+.cmimi-normal{
+    text-decoration: line-through;
+    color: #362417;
 }
 
 .gallery-product {
@@ -233,6 +241,10 @@
     font-size: 2.4rem;
 }
 
+.gallery-product1-cmimi .cmimi-normal {
+    font-size: 2rem;
+}
+
 .gallery-product1 {
     padding: 2.4rem;
 }
@@ -248,27 +260,28 @@
     background-position: bottom;
 }
 
-.featured-in{
+.featured-in {
     display: flex;
     flex-direction: column;
 }
 
-.section-title{
+.section-title {
     align-self: center;
 }
 
 .featured-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 3.2rem;
     margin-bottom: 2.4rem;
 }
 
-.featured-in .login-button{
+.featured-in .login-button {
     align-self: center;
 }
 
 .featured-item {
+    min-width: 220px;
     border-radius: 3px;
     color: #050401;
     overflow: hidden;
@@ -327,32 +340,41 @@
 
 /* ----------- FEATURED End ----------- */
 
+
 @media screen and (max-width:1130px) {
     .featured-items {
         gap: 1.2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo1 {
+        height: 50vw;
     }
 }
 
 @media screen and (max-width:768px) {
-    .products-gallery {
-        grid-template-columns: 1fr;
-        grid-template-areas: 'first'
-            'second'
-            'third';
-    }
-    .hero-title{
+
+    .hero-title {
         font-size: 3.2rem;
     }
+
     .offer-image1 {
         grid-row: 1;
+    }
+
+    .offer-image img {
+        width: 130px;
+        height: 130px;
     }
 
     .offers-section .container {
         align-items: flex-start;
     }
-    .offer-image{
+
+    .offer-image {
         justify-content: flex-start;
     }
+
     .offers p {
         margin-bottom: 2.4rem;
     }
@@ -361,20 +383,15 @@
         grid-template-columns: 1fr;
         row-gap: 2.4rem;
     }
-
-    .photo {
-        min-height: 60vh;
-    }
-
+    
     .about-content {
         width: 100%;
     }
 
-    .hero-image {
-        /* display: none; */
-    }
-
     .gallery-product1-cmimi {
+        font-size: 1.8rem;
+    }
+    .gallery-product1-cmimi .cmimi-normal {
         font-size: 1.6rem;
     }
 
@@ -390,8 +407,23 @@
 }
 
 @media screen and (max-width:640px) {
-    .hero{
+    .hero {
         gap: 3.2rem;
         flex-direction: column;
+    }
+
+    .products-gallery {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'first'
+            'second'
+            'third';
+    }
+
+    .featured-items {
+        grid-template-columns: 1fr
+    }
+
+    .photo {
+        height: 55vw;
     }
 }
