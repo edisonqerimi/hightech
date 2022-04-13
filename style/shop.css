@@ -370,6 +370,16 @@
     .products{
         grid-template-columns: 1fr;
     }
+    .sort-products form{
+        width: 100%;
+    }
+    .select-control{
+        width: 100%;
+        justify-content: space-between;
+    }
+    #sort{
+        width: 100%;
+    }
     .product-image{
         height: 40vh;
         background-size: contain;
