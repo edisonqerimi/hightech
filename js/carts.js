@@ -1,23 +1,23 @@
 
 export const carts = [
     {
-        'id':1,
         'userId': 1,
-        'productId':3
+        'productId':3,
+        'amount':3,
     },
     {
-        'id':2,
         'userId': 1,
-        'productId':4
+        'productId':4,
+        'amount':2,
     },
     {
-        'id':3,
         'userId': 2,
-        'productId':5
+        'productId':5,
+        'amount':1,
     },
     {
-        'id':4,
         'userId': 2,
-        'productId':6
+        'productId':6,
+        'amount':4,
     }
 ];

@@ -249,10 +249,12 @@ const products = [
 
 const bindProducts = (products, element) => {
     if (products.length > 0) {
-        const addedToCart = document.createElement('div');
-        addedToCart.classList.add('added-cart', 'hidden');
-        addedToCart.innerHTML = 'Added to cart'
-        element.appendChild(addedToCart);
+        const addedCarts = document.createElement('div');
+        addedCarts.classList.add('added-carts');
+        // const addedToCart = document.createElement('div');
+        // addedToCart.classList.add('added-cart', 'hidden');
+        // addedToCart.innerHTML = 'Added to cart'
+        element.appendChild(addedCarts);
         products.map(p => {
             const product = document.createElement('div');
             product.classList.add('product')

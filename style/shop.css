@@ -272,6 +272,10 @@
     justify-content: center;
 }
 
+#sort option{
+    background-color: #ddd;
+}
+
 .select-control{
     border: #beb9bf 1px solid;
     width: max-content;
@@ -313,7 +317,7 @@
     .product-filter{
         position: sticky;
         z-index: 300;
-        top:57px;
+        top:55px;
         min-height: auto;
         width: 100%;
         padding:0.4rem 1.2rem;

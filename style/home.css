@@ -272,7 +272,7 @@
 .featured-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 3.2rem;
+    gap: 3.6rem;
     margin-bottom: 2.4rem;
 }
 
@@ -336,6 +336,7 @@
     font-size: 1.6rem;
     font-weight: 500;
     color: #222;
+    background-color: #f0f0f0;
 }
 
 /* ----------- FEATURED End ----------- */
@@ -343,7 +344,7 @@
 
 @media screen and (max-width:1130px) {
     .featured-items {
-        gap: 1.2rem;
+        gap: 2.4rem;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -363,8 +364,8 @@
     }
 
     .offer-image img {
-        width: 130px;
-        height: 130px;
+        width: 110px;
+        height: 110px;
     }
 
     .offers-section .container {

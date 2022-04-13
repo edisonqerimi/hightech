@@ -19,6 +19,7 @@ const fetchCarts = () => {
           <th>Username</th>
           <th>Product Id</th>
           <th>Product</th>
+          <th>Amount</th>
           <th style = "background:'transparent';"></th>
         </tr>
       </table>
@@ -33,7 +34,8 @@ const fetchCarts = () => {
         <td>${user.username}</td>
         <td>${cart.productId}</td>
         <td>${product.brand} ${product.model}</td>
-        <td><button onclick="handleDelete(${cart.id})" class="btn">delete</button></td>
+        <td>${cart.amount}</td>
+        <td><button onclick="handleDelete(${cart.productId})" class="btn">delete</button></td>
       `
         }
         );
@@ -45,7 +47,7 @@ const fetchCarts = () => {
 
 const handleDelete = (id) => {
     let carts = JSON.parse(sessionStorage.getItem('carts'));
-    carts = carts.filter(cart => cart.id !== id)
+    carts = carts.filter(cart => cart.productId !== id)
     sessionStorage.setItem('carts', JSON.stringify(carts));
     fetchCarts()
 }
