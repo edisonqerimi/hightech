@@ -14,40 +14,27 @@ function hideTitle(e) {
 }
 
 const searchInput = document.querySelector('.search-input');
-const account = document.querySelector('.account-navbar');
 
 document.querySelector('.search-item').onclick = (e) => {
     searchInput.classList.toggle('hidden');
     searchInput.focus();
 };
 
-document.querySelector('.profile').onmouseenter = () => {
-    account.style.display = 'flex';
-}
-document.querySelector('.profile').onmouseleave = () => {
-    account.style.display = 'none';
-}
-
 const sidebar = document.querySelector('#sidebar');
 
-const showSidebar = document.getElementsByClassName('show-sidebar');
+document.querySelectorAll('.show-sidebar').forEach(el => el.onclick = () => {
+    sidebar.style.display = 'block';
+});
 
-const length = showSidebar.length;
+document.onmouseup = (e) => {
+    if (!sidebar.contains(e.target)) {
+        sidebar.style.display = 'none';
+    }
+};
 
-for (let i = 0; i < length; i++) {
-    showSidebar[i].addEventListener('click', () => {
-        sidebar.style.display = 'block';
-    })
-}
-
-document.querySelector('.close').onclick = () => {
+document.querySelectorAll('.close, .side-row').forEach(el => el.onclick = () => {
     sidebar.style.display = 'none';
-}
-document.querySelector('#support').onclick = () => {
-    document.querySelector('.footer').scrollIntoView({
-        behavior: "smooth"
-    })
-}
+})
 
 if (JSON.parse(sessionStorage.getItem('banner-closed'))) {
     document.querySelector('.banner').style.display = 'none';
@@ -68,6 +55,14 @@ window.addEventListener('resize', (e) => {
 })
 
 let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+let currentUserCarts;
+const cartCountEl = document.querySelector('.cart-count');
+if (currentUser != null) {
+    cartCountEl.classList.remove('hidden');
+    currentUserCarts = JSON.parse(sessionStorage.getItem('carts')).filter(c => c.userId === currentUser.id);
+    cartCountEl.innerHTML = currentUserCarts.length;
+}
+
 const accountNav = document.querySelector('#account-items-nav');
 const accountSide = document.querySelector('#account-items-side');
 

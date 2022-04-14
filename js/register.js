@@ -1,3 +1,8 @@
+
+if(currentUser!=null){
+    window.location = './index.html';
+}
+
 let users = JSON.parse(sessionStorage.getItem('users'));
 
 const firstName = document.querySelector('#firstname');

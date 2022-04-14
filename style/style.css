@@ -8,6 +8,7 @@
 /* ------------ GENERAL Start ------------ */
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -290,6 +291,25 @@ a {
     padding: 0.6rem 1rem;
 }
 
+
+
+.cart{
+    position: relative;
+}
+
+.cart-count{
+    position: absolute;
+    background-color: #A0351F;
+    top: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    right: -15%;
+}
+
 .search-item {
     display: flex;
     align-items: center;
@@ -347,10 +367,10 @@ a {
 
 .account-navbar {
     position: absolute;
+    display: none;
     top: 35px;
     right: -65px;
     border-radius: 3px;
-    display: flex;
     flex-direction: column;
     background: #FFFAFF;
     padding: 1.6rem 3.2rem;
@@ -382,6 +402,10 @@ a {
 
 .profile {
     position: relative;
+}
+
+.profile:hover .account-navbar{
+    display: flex;
 }
 
 .search-item:hover .search {
@@ -435,7 +459,7 @@ a {
 
 @keyframes slide {
     from {
-        left: -200px;
+        left: -50%;
     }
 
     to {

@@ -15,9 +15,10 @@ const divTable = document.querySelector('#table')
 const validEdit = document.getElementById('validEdit')
 
 const editModal = document.querySelector('#editModal')
+const editSection = document.querySelector('#editSection')
 const deleteModal = document.querySelector('#deleteModal')
+const deleteSection = document.querySelector('#deleteSection')
 const validDelete = document.querySelector('#validDelete')
-
 
 let editedFirst = document.querySelector('#editedFirst')
 let editedLast = document.querySelector('#editedLast')
@@ -72,11 +73,11 @@ const handleEdit = (id) => {
     editedFirst.value = users[userIndex].firstName;
     editedLast.value = users[userIndex].lastName;
     editedUsername.value = users[userIndex].username;
-    editModal.classList.remove('hidden')
+    editModal.classList.remove('hidden');
     editedFirst.focus();
 
     document.querySelector('#editTitle').innerHTML = `Edit user: ${users[userIndex].username}`
-    document.querySelector('#editSection').addEventListener('submit', (e) => {
+    document.querySelector('#editSection').onsubmit = (e) => {
         e.preventDefault();
         if (editedFirst.value.replace(' ', '') != '' &&
             editedFirst.value.replace(' ', '') != '' &&
@@ -93,7 +94,7 @@ const handleEdit = (id) => {
         else {
             validEdit.innerHTML = 'Fields cannot be blank!'
         }
-    })
+    }
 }
 const handleDelete = (id) => {
     deleteModal.classList.remove('hidden');
@@ -125,5 +126,12 @@ window.onload = () => {
     document.querySelector('#hideDelete').onclick = () => {
         deleteModal.classList.add('hidden');
     }
-
+    document.onmouseup = (e) => {
+        if (!editSection.contains(e.target)) {
+            editModal.classList.add('hidden');
+        }
+        if(!deleteSection.contains(e.target)){
+            deleteModal.classList.add('hidden')
+        }
+    };
 }

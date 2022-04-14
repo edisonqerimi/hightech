@@ -1,11 +1,16 @@
 
 const params = new window.URLSearchParams(window.location.search);
 
+if(JSON.parse(sessionStorage.getItem('currentUser'))!=null){
+    window.location = './index.html';
+}
+
 let returnPath = params.get('returnUrl');
 
 if (returnPath != null) {
     returnPath = returnPath.split('.html')[0].split('/').pop();;
 }
+
 
 const loginForm = document.querySelector('#loginForm');
 const usernameInput = document.querySelector('#username');

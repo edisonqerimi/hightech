@@ -106,7 +106,7 @@ document.getElementById('nav').innerHTML = `
                     <div>Shop</div>
                     <!--${bagIcon}-->
                 </a>
-                <a id='support' class="nav-item">
+                <a href='#footer-start' id='support' class="nav-item">
                     <div>Support</div>
                     <!--${supportIcon}-->
                 </a>
@@ -125,7 +125,7 @@ document.getElementById('nav').innerHTML = `
 
             <div class="profile icon-item">
                 ${profileIcon}
-            <div id='account' class='account-navbar hidden'>
+            <div id='account' class='account-navbar'>
                 <div id="account-items-nav" class="account-items-nav">
                     <a class='account-icon login' href="./login.html?returnUrl=${returnUrl}">
                         ${loginIcon}
@@ -140,6 +140,7 @@ document.getElementById('nav').innerHTML = `
             </div>
             <a href="./cart.html" class="cart icon-item">
                 ${cartIcon}
+                <div class='cart-count hidden'>0</div>
             </a>
             </div>
         </div>
@@ -147,7 +148,6 @@ document.getElementById('nav').innerHTML = `
 
 document.getElementById('sidebar').innerHTML = `
     <div class='close'>${closeIcon}</div>
-
     <div class="side-title-container">
         <a class='side-title' href="index.html">
             <div class='nav-logo'>${logoIcon}</div>
@@ -189,7 +189,7 @@ document.getElementById('sidebar').innerHTML = `
         <a href="./accessories.html" class="item-3 side-row">
             <div class="side-item">Accessories</div>
         </a>
-        <a href="#" class="item-3 side-row">
+        <a href="#footer-start" class="item-3 side-row">
             <div class="side-item">Support</div>
         </a>
     </div>
@@ -204,7 +204,7 @@ document.querySelector('.banner').innerHTML = `
 `;
 
 document.querySelector('.footer').innerHTML = `
-    <div class='footer-start'>
+    <div id='footer-start' class='footer-start'>
         <div class='footer-item footer-item1'>
             <h2>Subscribe</h2>
             <form class='footer-form'>

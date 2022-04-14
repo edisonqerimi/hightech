@@ -1,6 +1,5 @@
-let user = JSON.parse(sessionStorage.getItem('currentUser'));
 
-if (user == null) {
+if (currentUser == null) {
     window.location = './index.html'
 }
 
@@ -9,26 +8,26 @@ const lastName = document.querySelector('#lastname');
 const username = document.querySelector('#username');
 const email = document.querySelector('#email');
 
-document.querySelector('.fullname-title').innerHTML = `${user.firstName} ${user.lastName}`;
-firstName.value = `${user.firstName}`;
-lastName.value = `${user.lastName}`;
-username.value = `${user.username}`;
-email.value = `${user.email}`;
+document.querySelector('.fullname-title').innerHTML = `${currentUser.firstName} ${currentUser.lastName}`;
+firstName.value = `${currentUser.firstName}`;
+lastName.value = `${currentUser.lastName}`;
+username.value = `${currentUser.username}`;
+email.value = `${currentUser.email}`;
 
 document.querySelector('#profile-form').onsubmit = () => {
 
 
 
     let users = JSON.parse(sessionStorage.getItem('users'));
-    userIndex = users.findIndex((u => u.id == user.id));
+    userIndex = users.findIndex((u => u.id == currentUser.id));
 
-    users[userIndex].firstName = user.firstName = firstName.value;
-    users[userIndex].lastName = user.lastName = lastName.value;
-    users[userIndex].username = user.username = username.value;
-    users[userIndex].email = user.email = email.value;
+    users[userIndex].firstName = currentUser.firstName = firstName.value;
+    users[userIndex].lastName = currentUser.lastName = lastName.value;
+    users[userIndex].username = currentUser.username = username.value;
+    users[userIndex].email = currentUser.email = email.value;
 
 
     sessionStorage.setItem('users', JSON.stringify(users));
 
-    sessionStorage.setItem('currentUser', JSON.stringify(user));
+    sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
 }
